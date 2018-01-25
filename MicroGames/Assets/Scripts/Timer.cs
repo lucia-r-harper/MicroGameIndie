@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public enum PlayingState { Playing, Lost, Won}
 //TO BE ATTACHED TO TIMER TEXT COMPONENT
@@ -85,33 +84,33 @@ public class Timer : MonoBehaviour
                 break;
         }
     }
-    private void UpdateCheckToRestart()
-    {
-        switch (microgameState)
-        {
-            case PlayingState.Playing:
-                break;
-            case PlayingState.Lost:
-                if (Input.GetButton("Jump"))
-                {
-                    Restart();
-                }
-                break;
-            case PlayingState.Won:
-                if (Input.GetButton("Jump"))
-                {
-                    Restart();
-                }
-                break;
-            default:
-                break;
-        }
-    }
+    //private void UpdateCheckToRestart()
+    //{
+    //    switch (microgameState)
+    //    {
+    //        case PlayingState.Playing:
+    //            break;
+    //        case PlayingState.Lost:
+    //            if (Input.GetButton("Jump"))
+    //            {
+    //                Restart();
+    //            }
+    //            break;
+    //        case PlayingState.Won:
+    //            if (Input.GetButton("Jump"))
+    //            {
+    //                Restart();
+    //            }
+    //            break;
+    //        default:
+    //            break;
+    //    }
+    //}
 
-    private void Restart()
-    {
-        SceneManager.LoadScene(newSceneToLoad);
-    }
+    //private void Restart()
+    //{
+    //    SceneManager.LoadScene(newSceneToLoad);
+    //}
 
     public void ChangePlayingState(PlayingState stateToChangeTo)
     {

@@ -303,6 +303,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ApplicationQuiter.cs" />
     <Compile Include="Assets\Scripts\MicroGameRestarter.cs" />
     <Compile Include="Assets\Scripts\MovingTarget.cs" />
     <Compile Include="Assets\Scripts\ObjectRandomMovement.cs" />
@@ -313,6 +314,7 @@
     <Compile Include="Assets\Scripts\ScreenBorder.cs" />
     <Compile Include="Assets\Scripts\ShotFired.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
+    <Compile Include="Assets\Scripts\TitleScreenManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

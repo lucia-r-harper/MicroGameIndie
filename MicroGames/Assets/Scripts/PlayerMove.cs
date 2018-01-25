@@ -43,5 +43,9 @@ public class PlayerMove : MonoBehaviour
     private void UpdateMove()
     {
         transform.Translate(horizontalInputValue * speed, verticalInputValue * speed, 0);
+
+        //TODO: Find out how to clamp!!!
+        //transform.position = new Vector3(Mathf.Clamp((horizontalInputValue * speed), -8.875f, 8.875f), Mathf.Clamp((verticalInputValue * speed), -5f, 5f));
+        //transform.position = new Vector3(Mathf.Clamp(0, -8.875f, 8.875f), Mathf.Clamp(0, -5f, 5f));
     }
 }

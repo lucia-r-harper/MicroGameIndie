@@ -31,5 +31,6 @@ public class PlayerHealth : MonoBehaviour
     private void Die()
     {
         timer.ChangePlayingState(PlayingState.Lost);
+        gameObject.GetComponent<PlayerMove>().enabled = false;
     }
 }

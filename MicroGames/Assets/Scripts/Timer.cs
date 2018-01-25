@@ -56,7 +56,7 @@ public class Timer : MonoBehaviour
     void Update ()
     {
         UpdateTimerText();
-        UpdateCheckToRestart();
+        //UpdateCheckToRestart();
 	}
 
 

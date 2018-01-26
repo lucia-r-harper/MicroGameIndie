@@ -2,13 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TitleScreenManager : MonoBehaviour
 {
     public List<GameObject> MainMenuPanels = new List<GameObject>();
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         DisableAllPanelsExceptForTitle();
 	}

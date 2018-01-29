@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == ThingToAvoid)
+        if (collision.gameObject.tag == ThingToAvoid && timer.MicroGameState == PlayingState.Playing)
         {
             Die();
         }

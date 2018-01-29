@@ -9,7 +9,7 @@ public class MicroGameRestarter : MonoBehaviour
     public string newSceneToLoad = "testScene";
 
     private int firstMicrogame = 2;
-    private int lastMicrogame = 3;
+    private int lastMicrogame = 4;
 
     private Timer currentTimer;
 	// Use this for initialization
@@ -34,13 +34,13 @@ public class MicroGameRestarter : MonoBehaviour
             case PlayingState.Playing:
                 break;
             case PlayingState.Lost:
-                if (Input.GetButton("Jump"))
+                if (Input.GetButtonDown("Jump"))
                 {
                     ChangeMicroGame();
                 }
                 break;
             case PlayingState.Won:
-                if (Input.GetButton("Jump"))
+                if (Input.GetButtonDown("Jump"))
                 {
                     ChangeMicroGame();
                 }

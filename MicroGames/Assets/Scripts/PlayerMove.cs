@@ -43,9 +43,31 @@ public class PlayerMove : MonoBehaviour
     private void UpdateMove()
     {
         transform.Translate(horizontalInputValue * speed, verticalInputValue * speed, 0);
+        RestrictMovementWithinScreenBoundaries();
+    }
 
-        //TODO: Find out how to clamp!!!
-        //transform.position = new Vector3(Mathf.Clamp((horizontalInputValue * speed), -8.875f, 8.875f), Mathf.Clamp((verticalInputValue * speed), -5f, 5f));
-        //transform.position = new Vector3(Mathf.Clamp(0, -8.875f, 8.875f), Mathf.Clamp(0, -5f, 5f));
+    private void RestrictMovementWithinScreenBoundaries()
+    {
+        #region BindXAxisMovement
+        if (transform.position.x <= -8.875)
+        {
+            transform.position = new Vector3(-8.875f, transform.position.y);
+        }
+        else if (transform.position.x >= 8.875)
+        {
+            transform.position = new Vector3(8.875f, transform.position.y);
+        }
+        #endregion
+
+        #region BindYAxisMovement
+        if (transform.position.y <= -5)
+        {
+            transform.position = new Vector3(transform.position.x, -5);
+        }
+        else if (transform.position.y >= 5)
+        {
+            transform.position = new Vector3(transform.position.x, 5);
+        }
+        #endregion
     }
 }

@@ -5,12 +5,12 @@ using UnityEngine;
 public class ShotFired : MonoBehaviour
 {
     private int speed = 1;
-    private Timer currentTimer;
+    private Timer timer;
 
     // Use this for initialization
     void Start ()
     {
-        currentTimer = GameObject.FindObjectOfType<Timer>();
+        timer = GameObject.FindObjectOfType<Timer>();
     }
 	
 	// Update is called once per frame
@@ -31,9 +31,10 @@ public class ShotFired : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "border")
+        if (collision.gameObject.tag == "border" && timer.MicroGameState == PlayingState.Playing)
         {
-            currentTimer.ChangePlayingState(PlayingState.Lost);
+            //currentTimer.ChangePlayingState(PlayingState.Lost);
+            timer.MicroGameState = PlayingState.Lost;
         }
     }
 }

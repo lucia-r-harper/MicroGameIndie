@@ -294,6 +294,7 @@
     <Compile Include="Assets\Scripts\ScreenBorder.cs" />
     <Compile Include="Assets\Scripts\ShotFired.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
+    <Compile Include="Assets\Scripts\TimerChecker.cs" />
     <Compile Include="Assets\Scripts\TitleScreenManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

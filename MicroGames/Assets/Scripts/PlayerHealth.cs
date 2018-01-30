@@ -30,7 +30,8 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
-        timer.ChangePlayingState(PlayingState.Lost);
+        //timer.ChangePlayingState(PlayingState.Lost);
+        timer.MicroGameState = PlayingState.Lost;
         gameObject.GetComponent<PlayerMove>().enabled = false;
     }
 }

@@ -34,14 +34,14 @@ public class MicroGameRestarter : MonoBehaviour
             case PlayingState.Playing:
                 break;
             case PlayingState.Lost:
-                MetaGameManager.LoseLife();
+                //MetaGameManager.LoseLife();
                 if (Input.GetButtonDown("Jump"))
                 {
                     ChangeMicroGame();
                 }
                 break;
             case PlayingState.Won:
-                MetaGameManager.WinGame();
+                //MetaGameManager.WinGame();
                 if (Input.GetButtonDown("Jump"))
                 {
                     ChangeMicroGame();

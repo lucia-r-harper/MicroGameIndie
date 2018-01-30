@@ -8,12 +8,12 @@ public class MovingTarget : MonoBehaviour
     private float speed = 0.25f;
     private TargetMovingState movingState = TargetMovingState.LeftToRight;
 
-    private Timer currentTimer;
+    private Timer timer;
 
 	// Use this for initialization
 	void Start ()
     {
-        currentTimer = GameObject.FindObjectOfType<Timer>();
+        timer = GameObject.FindObjectOfType<Timer>();
 	}
 	
 	// Update is called once per frame
@@ -53,11 +53,12 @@ public class MovingTarget : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "bullet")
+        if (collision.gameObject.tag == "bullet" && timer.MicroGameState == PlayingState.Playing)
         {
             //Destroy(this);
             DestroyObject(collision.gameObject);
-            currentTimer.ChangePlayingState(PlayingState.Won);
+            //timer.ChangePlayingState(PlayingState.Won);
+            timer.MicroGameState = PlayingState.Won;
         }
     }
 

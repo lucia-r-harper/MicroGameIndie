@@ -12,6 +12,14 @@ public class Timer : MonoBehaviour
     public string newSceneToLoad = "testScene";
 
     private int seconds;
+    public int Seconds
+    {
+        get
+        {
+            return seconds;
+        }
+    }
+
     private Text timerText;
     private WaitForSeconds timeCountDownRate = new WaitForSeconds(1);
 
@@ -20,9 +28,27 @@ public class Timer : MonoBehaviour
 
     public PlayingState MicroGameState
     {
-        get
+        get { return microgameState; }
+        set
         {
-            return microgameState;
+            if (value == microgameState)
+            {
+                return;
+            }
+            microgameState = value;
+            switch (microgameState)
+            {
+                case PlayingState.Playing:
+                    break;
+                case PlayingState.Lost:
+                    MetaGameManager.LoseLife();
+                    break;
+                case PlayingState.Won:
+                    MetaGameManager.WinGame();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
@@ -44,10 +70,10 @@ public class Timer : MonoBehaviour
         {
             yield return timeCountDownRate;
             seconds--;
-            if (seconds == 0)
-            {
-                microgameState = PlayingState.Won;
-            }
+            //if (seconds == 0)
+            //{
+            //    microgameState = PlayingState.Won;
+            //}
         }
     }
 

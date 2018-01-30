@@ -8,8 +8,8 @@ public class MicroGameRestarter : MonoBehaviour
 {
     //public string newSceneToLoad = "testScene";
 
-    private int firstMicrogame = 2;
-    private int lastMicrogame = 4;
+    private int firstMicrogame = 3;
+    private int lastMicrogame = 5;
 
     private Timer currentTimer;
 	// Use this for initialization

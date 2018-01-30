@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MetaGameManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class MetaGameManager : MonoBehaviour
 
     public Text ScoreText;
     public Text LivesText;
+    private static string GameOverScene = "GameOverScene";
+
 	// Use this for initialization
 	void Start ()
     {
@@ -37,5 +40,14 @@ public class MetaGameManager : MonoBehaviour
     public static void LoseLife()
     {
         lives--;
+        if (lives <= 0)
+        {
+            GameOver();
+        }
+    }
+
+    private static void GameOver()
+    {
+        SceneManager.LoadScene(GameOverScene);
     }
 }

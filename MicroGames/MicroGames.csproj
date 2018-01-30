@@ -283,6 +283,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ApplicationQuiter.cs" />
+    <Compile Include="Assets\Scripts\MetaGameManager.cs" />
     <Compile Include="Assets\Scripts\MicroGameRestarter.cs" />
     <Compile Include="Assets\Scripts\MovingTarget.cs" />
     <Compile Include="Assets\Scripts\ObjectRandomMovement.cs" />

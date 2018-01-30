@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MicroGameRestarter : MonoBehaviour
 {
-    public string newSceneToLoad = "testScene";
+    //public string newSceneToLoad = "testScene";
 
     private int firstMicrogame = 2;
     private int lastMicrogame = 4;
@@ -34,12 +34,14 @@ public class MicroGameRestarter : MonoBehaviour
             case PlayingState.Playing:
                 break;
             case PlayingState.Lost:
+                MetaGameManager.LoseLife();
                 if (Input.GetButtonDown("Jump"))
                 {
                     ChangeMicroGame();
                 }
                 break;
             case PlayingState.Won:
+                MetaGameManager.WinGame();
                 if (Input.GetButtonDown("Jump"))
                 {
                     ChangeMicroGame();

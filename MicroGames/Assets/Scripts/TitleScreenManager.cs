@@ -7,10 +7,12 @@ using UnityEngine.SceneManagement;
 public class TitleScreenManager : MonoBehaviour
 {
     public List<GameObject> MainMenuPanels = new List<GameObject>();
+    public GameObject metaGameManager;
 
     // Use this for initialization
     void Start ()
     {
+        metaGameManager.SetActive(false);
         DisableAllPanelsExceptForTitle();
 	}
 
@@ -25,6 +27,11 @@ public class TitleScreenManager : MonoBehaviour
     {
 		
 	}
+
+    public void ActivateMetagame()
+    {
+        metaGameManager.SetActive(true);
+    }
 
     public void ChangePanel(GameObject panelToChangeTo)
     {

@@ -282,21 +282,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ApplicationQuiter.cs" />
-    <Compile Include="Assets\Scripts\GameOverManager.cs" />
-    <Compile Include="Assets\Scripts\MetaGameManager.cs" />
-    <Compile Include="Assets\Scripts\MicroGameRestarter.cs" />
-    <Compile Include="Assets\Scripts\MovingTarget.cs" />
-    <Compile Include="Assets\Scripts\ObjectRandomMovement.cs" />
-    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
-    <Compile Include="Assets\Scripts\PlayerMove.cs" />
-    <Compile Include="Assets\Scripts\PlayerShoot.cs" />
-    <Compile Include="Assets\Scripts\RandomBulletSpawner.cs" />
-    <Compile Include="Assets\Scripts\ScreenBorder.cs" />
-    <Compile Include="Assets\Scripts\ShotFired.cs" />
-    <Compile Include="Assets\Scripts\Timer.cs" />
-    <Compile Include="Assets\Scripts\TimerChecker.cs" />
-    <Compile Include="Assets\Scripts\TitleScreenManager.cs" />
+    <Compile Include="Assets\Scripts\Generics\MicroGameRestarter.cs" />
+    <Compile Include="Assets\Scripts\Generics\ScreenBorder.cs" />
+    <Compile Include="Assets\Scripts\Generics\Timer.cs" />
+    <Compile Include="Assets\Scripts\Generics\TimerChecker.cs" />
+    <Compile Include="Assets\Scripts\Managers\ApplicationQuiter.cs" />
+    <Compile Include="Assets\Scripts\Managers\GameOverManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\MetaGameManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\TitleScreenManager.cs" />
+    <Compile Include="Assets\Scripts\MicroGameSpecific\BulletDodge\ObjectRandomMovement.cs" />
+    <Compile Include="Assets\Scripts\MicroGameSpecific\BulletDodge\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\MicroGameSpecific\BulletDodge\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\MicroGameSpecific\BulletDodge\RandomBulletSpawner.cs" />
+    <Compile Include="Assets\Scripts\MicroGameSpecific\TargetShoot\MovingTarget.cs" />
+    <Compile Include="Assets\Scripts\MicroGameSpecific\TargetShoot\PlayerShoot.cs" />
+    <Compile Include="Assets\Scripts\MicroGameSpecific\TargetShoot\ShotFired.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

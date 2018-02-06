@@ -294,6 +294,7 @@
     <Compile Include="Assets\Scripts\MicroGameSpecific\BulletDodge\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\BulletDodge\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\BulletDodge\RandomBulletSpawner.cs" />
+    <Compile Include="Assets\Scripts\MicroGameSpecific\TargetShoot\GameLoss.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\TargetShoot\MovingTarget.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\TargetShoot\PlayerShoot.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\TargetShoot\ShotFired.cs" />

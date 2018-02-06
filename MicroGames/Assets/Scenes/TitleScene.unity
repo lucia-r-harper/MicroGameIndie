@@ -2404,7 +2404,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Micro Game Hell (real name TBD) is a collection of Microgames that use only
+  m_Text: Micro Game Box (real name TBD) is a collection of Microgames that use only
     the arrow keys and the spacebar. Follow the command using these controls and complete
     the short, quick objectives in succession.
 --- !u!222 &1854541497
@@ -2480,7 +2480,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Micro Game Hell (Working Title)
+  m_Text: Micro Game Box (Working Title)
 --- !u!222 &1960031582
 CanvasRenderer:
   m_ObjectHideFlags: 0

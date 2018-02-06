@@ -157,3 +157,4 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 31316aadfb4312f2b971a095fdba8f82 Assembly-CSharp.dll:.GameOverManager
 12a37f1c7c3d5e1c7037b7a1096c5ecb Assembly-CSharp.dll:.ObjectRandomMovement
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ApplicationQuiter
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GameLoss

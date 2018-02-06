@@ -29,9 +29,9 @@ public class ShotFired : MonoBehaviour
         transform.Translate(0.0f, speed, 0);
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "border" && timer.MicroGameState == PlayingState.Playing)
+        if (collision.gameObject.tag == "gamelosstrigger")
         {
             //currentTimer.ChangePlayingState(PlayingState.Lost);
             timer.MicroGameState = PlayingState.Lost;

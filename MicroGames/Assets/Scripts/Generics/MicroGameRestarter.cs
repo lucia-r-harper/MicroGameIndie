@@ -9,7 +9,7 @@ public class MicroGameRestarter : MonoBehaviour
     //public string newSceneToLoad = "testScene";
 
     private int firstMicrogame = 2;
-    private int lastMicrogame = 4;
+    private int lastMicrogame = 5;
 
     private Timer currentTimer;
 	// Use this for initialization
@@ -54,7 +54,13 @@ public class MicroGameRestarter : MonoBehaviour
 
     public void ChangeMicroGame()
     {
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
         int microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
+        //refactor me so I am more assured
+        if (microgameToLoad == currentScene)
+        {
+            microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
+        }
         SceneManager.LoadScene(microgameToLoad);
     }
 }

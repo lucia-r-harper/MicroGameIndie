@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/TargetShoot.unity
+- path: Assets/Scenes/MashSpaceRace.unity
   isLoaded: 1
   isActive: 1

@@ -11,8 +11,8 @@ public class PlayerMove : MonoBehaviour
 
     public float speed;
 
-    private float verticalInputValue;
-    private float horizontalInputValue;
+    protected float verticalInputValue;
+    protected float horizontalInputValue;
 
 	// Use this for initialization
 	void Start ()
@@ -31,7 +31,7 @@ public class PlayerMove : MonoBehaviour
         UpdateMove();
     }
 
-    private void UpdateMoveValues()
+    protected virtual void UpdateMoveValues()
     {
         verticalInputValue = Input.GetAxis(VerticalInput);
         horizontalInputValue = Input.GetAxis(HorizontalInput);

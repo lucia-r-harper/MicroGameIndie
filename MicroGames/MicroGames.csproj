@@ -311,6 +311,7 @@
     <Compile Include="Assets\Scripts\Managers\GameOverManager.cs" />
     <Compile Include="Assets\Scripts\Managers\MetaGameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\TitleScreenManager.cs" />
+    <Compile Include="Assets\Scripts\MicroGameSpecific\AbductGame\Abductee.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\AbductGame\AbductionZone.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\AbductGame\PressSpaceToAbduct.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\BulletDodge\ObjectRandomMovement.cs" />

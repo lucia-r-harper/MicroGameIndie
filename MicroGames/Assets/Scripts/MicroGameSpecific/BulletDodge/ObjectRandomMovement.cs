@@ -8,21 +8,26 @@ public class ObjectRandomMovement : MonoBehaviour
     public float minSpeed;
     public float maxSpeed;
 
-    private float horizontalMovementValue;
-    private float verticalMovementValue;
-    private float speed;
+    protected float horizontalMovementValue;
+    protected float verticalMovementValue;
+    protected float speed;
 
 	// Use this for initialization
 	void Start ()
+    {
+        SetRandomMovementAndSpeed();
+    }
+
+    protected void SetRandomMovementAndSpeed()
     {
         horizontalMovementValue = UnityEngine.Random.Range(-1.0f, 1.0f);
         verticalMovementValue = UnityEngine.Random.Range(-1.0f, 1.0f);
         Debug.Log("x:" + horizontalMovementValue + " y:" + verticalMovementValue);
         speed = UnityEngine.Random.Range(minSpeed, maxSpeed);
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update ()
     {
 		
 	}
@@ -32,7 +37,7 @@ public class ObjectRandomMovement : MonoBehaviour
         MoveFixedUpdate();
     }
 
-    private void MoveFixedUpdate()
+    protected void MoveFixedUpdate()
     {
         transform.Translate(horizontalMovementValue * speed, verticalMovementValue * speed, 0);
     }

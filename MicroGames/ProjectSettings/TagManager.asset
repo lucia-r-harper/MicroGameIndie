@@ -8,6 +8,7 @@ TagManager:
   - bullet
   - gamelosstrigger
   - goal
+  - abductee
   layers:
   - Default
   - TransparentFX

@@ -5,29 +5,26 @@ using UnityEngine;
 
 public class AbductionZone : MonoBehaviour
 {
-
+    private Timer timer;
 	// Use this for initialization
 	void Start ()
     {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
+        timer = GameObject.FindObjectOfType<Timer>();
 	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "abductee")
+        //collision.gameObject.tag == "abductee"
+        if (collision.gameObject.GetComponent<Abductee>() != null)
         {
             Abudct(collision.gameObject);
         }
     }
 
-    private void Abudct(GameObject gameObject)
+    private void Abudct(GameObject abductee)
     {
-        throw new NotImplementedException();
+        abductee.SetActive(false);
+        timer.MicroGameState = PlayingState.Won;
     }
 }

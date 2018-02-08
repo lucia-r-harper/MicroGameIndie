@@ -26,3 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AbductGame.unity
     guid: 8d073b2332877cb48a210642d02a0cc0
+  - enabled: 1
+    path: Assets/Scenes/Pong.unity
+    guid: 330390b7acb07854fb335a618693599e

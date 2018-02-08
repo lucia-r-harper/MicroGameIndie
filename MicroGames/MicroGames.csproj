@@ -304,6 +304,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Generics\MicroGameRestarter.cs" />
+    <Compile Include="Assets\Scripts\Generics\ObjectRandomMovement.cs" />
     <Compile Include="Assets\Scripts\Generics\ScreenBorder.cs" />
     <Compile Include="Assets\Scripts\Generics\Timer.cs" />
     <Compile Include="Assets\Scripts\Generics\TimerChecker.cs" />
@@ -314,12 +315,14 @@
     <Compile Include="Assets\Scripts\MicroGameSpecific\AbductGame\Abductee.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\AbductGame\AbductionZone.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\AbductGame\PressSpaceToAbduct.cs" />
-    <Compile Include="Assets\Scripts\MicroGameSpecific\BulletDodge\ObjectRandomMovement.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\BulletDodge\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\BulletDodge\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\BulletDodge\RandomBulletSpawner.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\MashButton\Goal.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\MashButton\MashSpaceToMove.cs" />
+    <Compile Include="Assets\Scripts\MicroGameSpecific\Pong\PongAI.cs" />
+    <Compile Include="Assets\Scripts\MicroGameSpecific\Pong\PongBallMovement.cs" />
+    <Compile Include="Assets\Scripts\MicroGameSpecific\Pong\PongGoal.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\TargetShoot\GameLoss.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\TargetShoot\MovingTarget.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\TargetShoot\PlayerShoot.cs" />

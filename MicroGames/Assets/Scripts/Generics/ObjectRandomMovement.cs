@@ -18,7 +18,7 @@ public class ObjectRandomMovement : MonoBehaviour
         SetRandomMovementAndSpeed();
     }
 
-    protected void SetRandomMovementAndSpeed()
+    protected virtual void SetRandomMovementAndSpeed()
     {
         horizontalMovementValue = UnityEngine.Random.Range(-1.0f, 1.0f);
         verticalMovementValue = UnityEngine.Random.Range(-1.0f, 1.0f);

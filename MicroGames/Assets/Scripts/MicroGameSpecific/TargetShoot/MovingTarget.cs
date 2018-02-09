@@ -51,17 +51,6 @@ public class MovingTarget : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "bullet" && timer.MicroGameState == PlayingState.Playing)
-        {
-            //Destroy(this);
-            DestroyObject(collision.gameObject);
-            //timer.ChangePlayingState(PlayingState.Won);
-            timer.MicroGameState = PlayingState.Won;
-        }
-    }
-
     private void MoveLeftToRight()
     {
         transform.Translate(speed, 0, 0);

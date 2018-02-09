@@ -31,15 +31,17 @@ public class ShotFired : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "gamelosstrigger")
+        if (collision.gameObject.tag == "gamelosstrigger" && timer.MicroGameState == PlayingState.Playing)
         {
-            //currentTimer.ChangePlayingState(PlayingState.Lost);
             timer.MicroGameState = PlayingState.Lost;
         }
     }
 
-    private void OnDestroy()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        timer.MicroGameState = PlayingState.Won;
+        if (collision.gameObject.tag == "target" && timer.MicroGameState == PlayingState.Playing)
+        {
+            timer.MicroGameState = PlayingState.Won;
+        }
     }
 }

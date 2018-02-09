@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PongBallMovement : ObjectRandomMovement
 {
-
+    private AudioSource audioSource;
 	// Use this for initialization
 	void Start ()
     {
         SetRandomMovementAndSpeed();
-	}
+        audioSource = GetComponent<AudioSource>();
+
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -34,6 +36,7 @@ public class PongBallMovement : ObjectRandomMovement
     {
         if (collision.gameObject.tag == "Player")
         {
+            audioSource.Play();
             horizontalMovementValue *= -1;
         }
     }

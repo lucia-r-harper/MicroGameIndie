@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class AbductionZone : MonoBehaviour
 {
     private Timer timer;
+    private AudioSource audioSource;
 	// Use this for initialization
 	void Start ()
     {
@@ -26,5 +28,11 @@ public class AbductionZone : MonoBehaviour
     {
         abductee.SetActive(false);
         timer.MicroGameState = PlayingState.Won;
+    }
+
+    private void OnEnable()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
     }
 }

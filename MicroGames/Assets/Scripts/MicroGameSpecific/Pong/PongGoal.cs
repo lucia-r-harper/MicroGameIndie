@@ -23,7 +23,7 @@ public class PongGoal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<PongBallMovement>() != null)
+        if (collision.gameObject.GetComponent<PongBallMovement>() != null && timer.MicroGameState == PlayingState.Playing)
         {
             switch (goalMode)
             {

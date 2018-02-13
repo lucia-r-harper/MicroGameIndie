@@ -14,8 +14,17 @@ public class MetaGameManager : MonoBehaviour
     public Text LivesText;
     private static string GameOverScene = "GameOverScene";
 
-	// Use this for initialization
-	void Start ()
+    private static int difficultyScale = 3;
+    public static int Difficulty
+    {
+        get
+        {
+            return score / difficultyScale;
+        }
+    }
+
+    // Use this for initialization
+    void Start ()
     {
         DontDestroyOnLoad(this);
 	}

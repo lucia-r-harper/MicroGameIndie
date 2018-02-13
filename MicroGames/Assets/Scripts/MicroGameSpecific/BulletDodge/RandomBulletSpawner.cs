@@ -14,11 +14,20 @@ public class RandomBulletSpawner : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
+        AdjustNumberOfBulletsToSpawnForDifficulty();
         for (int i = 0; i < NumberOfBulletsToSpawn; i++)
         {
             SpawnBullet();
         }
 	}
+
+    private void AdjustNumberOfBulletsToSpawnForDifficulty()
+    {
+        int numberOfExtraBulletsToAdd = MetaGameManager.Difficulty;
+        NumberOfBulletsToSpawn += numberOfExtraBulletsToAdd;
+
+        Debug.Log("number of Extra Bullets Added: " + numberOfExtraBulletsToAdd.ToString());
+    }
 
     private void SpawnBullet()
     {

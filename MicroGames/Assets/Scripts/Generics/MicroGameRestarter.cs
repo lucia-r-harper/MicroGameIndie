@@ -12,6 +12,7 @@ public class MicroGameRestarter : MonoBehaviour
     private int lastMicrogame = 7;
 
     private Timer currentTimer;
+    
 	// Use this for initialization
 	void Start ()
     {

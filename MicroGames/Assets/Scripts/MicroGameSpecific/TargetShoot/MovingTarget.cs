@@ -53,7 +53,10 @@ public class MovingTarget : MonoBehaviour
 
     private void MoveLeftToRight()
     {
-        transform.Translate(speed, 0, 0);
+        if (timer.MicroGameState == PlayingState.Playing)
+        {
+            transform.Translate(speed, 0, 0);
+        }
     }
 
     private void MoveUpAndDown()

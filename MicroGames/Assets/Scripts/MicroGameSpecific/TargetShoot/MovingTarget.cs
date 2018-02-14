@@ -1,12 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum TargetMovingState { LeftToRight, UpAndDown, Still}
+
 public class MovingTarget : MonoBehaviour
 {
     private float speed = 0.25f;
-    private TargetMovingState movingState = TargetMovingState.LeftToRight;
+    private float rotationspeed = 25f;
 
     private Timer timer;
 
@@ -24,19 +25,16 @@ public class MovingTarget : MonoBehaviour
 
     private void FixedUpdate()
     {
-        UpdateMovementBasedOnMovingState();
-    }
-
-    private void UpdateMovementBasedOnMovingState()
-    {
-        switch (movingState)
+        switch (timer.MicroGameState)
         {
-            case TargetMovingState.LeftToRight:
+            case PlayingState.Playing:
                 MoveLeftToRight();
                 break;
-            case TargetMovingState.UpAndDown:
+            case PlayingState.Lost:
+                MoveLeftToRight();
                 break;
-            case TargetMovingState.Still:
+            case PlayingState.Won:
+                SpinOut();
                 break;
             default:
                 break;
@@ -45,7 +43,7 @@ public class MovingTarget : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "border")
+        if (collision.gameObject.tag == "border" && timer.MicroGameState != PlayingState.Won)
         {
             speed *= -1;
         }
@@ -53,14 +51,17 @@ public class MovingTarget : MonoBehaviour
 
     private void MoveLeftToRight()
     {
-        if (timer.MicroGameState == PlayingState.Playing)
-        {
-            transform.Translate(speed, 0, 0);
-        }
+        transform.Translate(speed, 0, 0);
     }
 
-    private void MoveUpAndDown()
+    private void SpinOut()
     {
-        transform.Translate(0, speed, 0);
+        transform.Rotate(0, 0, rotationspeed);
+        transform.Translate(0, Mathf.Abs(speed), 0, Space.World);
+
+        if (transform.localScale.x > 0 && transform.localScale.y > 0)
+        {
+            transform.localScale -= new Vector3(0.1f, 0.1f, 0);
+        }
     }
 }

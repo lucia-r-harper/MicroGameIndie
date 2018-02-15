@@ -12,6 +12,8 @@ public class MicroGameRestarter : MonoBehaviour
     private int lastMicrogame = 7;
 
     private Timer currentTimer;
+
+    private WaitForSeconds transitionDelay = new WaitForSeconds(1);
     
 	// Use this for initialization
 	void Start ()
@@ -36,24 +38,31 @@ public class MicroGameRestarter : MonoBehaviour
                 break;
             case PlayingState.Lost:
                 //MetaGameManager.LoseLife();
-                if (Input.GetButtonDown("Jump"))
-                {
-                    ChangeMicroGame();
-                }
+                StartCoroutine(ChangeMicroGame());
                 break;
             case PlayingState.Won:
                 //MetaGameManager.WinGame();
-                if (Input.GetButtonDown("Jump"))
-                {
-                    ChangeMicroGame();
-                }
+                StartCoroutine(ChangeMicroGame());
                 break;
             default:
                 break;
         }
     }
 
-    public void ChangeMicroGame()
+    public IEnumerator ChangeMicroGame()
+    {
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        int microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
+        //refactor me so I am more assured
+        if (microgameToLoad == currentScene)
+        {
+            microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
+        }
+        yield return transitionDelay;
+        SceneManager.LoadScene(microgameToLoad);
+    }
+
+    public void StartSession()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         int microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);

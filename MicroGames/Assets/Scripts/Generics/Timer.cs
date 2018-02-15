@@ -101,10 +101,10 @@ public class Timer : MonoBehaviour
                 timerText.text = seconds.ToString();
                 break;
             case PlayingState.Lost:
-                timerText.text = "You lose! Press space to continue";
+                timerText.text = "You lose! Get ready!";
                 break;
             case PlayingState.Won:
-                timerText.text = "Finished! Press space to continue";
+                timerText.text = "Finished! Get ready!";
                 break;
             default:
                 break;

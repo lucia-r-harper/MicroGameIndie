@@ -1,30 +1,39 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PongBallMovement : ObjectRandomMovement
 {
     private AudioSource audioSource;
-	// Use this for initialization
-	void Start ()
+    private float difficultySpeedAdjustmentRate = 20;
+    // Use this for initialization
+    void Start ()
     {
-        SetRandomMovementAndSpeed();
+        speed = 0.5f;
+        SetRandomMovement();
+        SetSpeedBasedOnDifficulty();
         audioSource = GetComponent<AudioSource>();
 
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+
+    // Update is called once per frame
+    void Update ()
     {
 		
 	}
 
-    protected override void SetRandomMovementAndSpeed()
+    private void SetSpeedBasedOnDifficulty()
+    {
+        speed += MetaGameManager.Difficulty / difficultySpeedAdjustmentRate;
+    }
+
+    protected void SetRandomMovement()
     {
         horizontalMovementValue = UnityEngine.Random.Range(0, 1.0f);
         verticalMovementValue = UnityEngine.Random.Range(-1.0f, 1.0f);
-        Debug.Log("x:" + horizontalMovementValue + " y:" + verticalMovementValue);
-        speed = UnityEngine.Random.Range(minSpeed, maxSpeed);
+        Debug.Log("x:" + horizontalMovementValue + " y:" + verticalMovementValue); 
     }
 
     private void FixedUpdate()

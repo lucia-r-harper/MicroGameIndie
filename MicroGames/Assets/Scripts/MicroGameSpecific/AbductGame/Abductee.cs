@@ -9,13 +9,22 @@ public class Abductee : ObjectRandomMovement
 
     private WaitForSeconds timeUntilChangesMovement;
 
+    private float difficultySpeedAdjustmentScaling = 10;
+
 	// Use this for initialization
 	void Start ()
     {
+        AdjustSpeedForDifficulty();
         timeUntilChangesMovement = new WaitForSeconds(TimeUntilChangesMovement);
         //SetRandomMovementAndSpeed();
         StartCoroutine(SetNewMovementBasedOnIntervalOfTime());
 	}
+
+    private void AdjustSpeedForDifficulty()
+    {
+        minSpeed += MetaGameManager.Difficulty/10;
+        maxSpeed += MetaGameManager.Difficulty/10;
+    }
 
     private IEnumerator SetNewMovementBasedOnIntervalOfTime()
     {

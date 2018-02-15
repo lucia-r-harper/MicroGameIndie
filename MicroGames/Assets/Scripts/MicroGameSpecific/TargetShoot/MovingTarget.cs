@@ -8,17 +8,25 @@ public class MovingTarget : MonoBehaviour
 {
     private float speed = 0.25f;
     private float rotationspeed = 25f;
+    private float difficultySpeedAdjustmentRate = 20;
 
     private Timer timer;
+
 
 	// Use this for initialization
 	void Start ()
     {
+        AdjustSpeedBasedOnDifficulty();
         timer = GameObject.FindObjectOfType<Timer>();
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    private void AdjustSpeedBasedOnDifficulty()
+    {
+        speed += MetaGameManager.Difficulty / difficultySpeedAdjustmentRate;
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
         
 	}

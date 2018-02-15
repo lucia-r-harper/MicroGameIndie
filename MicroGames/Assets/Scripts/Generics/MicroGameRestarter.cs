@@ -53,20 +53,25 @@ public class MicroGameRestarter : MonoBehaviour
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         int microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
-        //refactor me so I am more assured
-        if (microgameToLoad == currentScene)
+
+        //if (microgameToLoad == currentScene)
+        //{
+        //    microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
+        //}
+        while (microgameToLoad == currentScene)
         {
             microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
         }
         yield return transitionDelay;
         SceneManager.LoadScene(microgameToLoad);
+        yield return transitionDelay;
     }
 
     public void StartSession()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         int microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
-        //refactor me so I am more assured
+
         if (microgameToLoad == currentScene)
         {
             microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);

@@ -5,9 +5,12 @@ using UnityEngine;
 public class MashSpaceToMove : PlayerMove
 {
     private Timer timer;
-	// Use this for initialization
-	void Start ()
+    private float difficultySpeedAdjustmentRate = 20;
+
+    // Use this for initialization
+    void Start ()
     {
+        speed -= MetaGameManager.Difficulty / difficultySpeedAdjustmentRate;
         timer = GameObject.FindObjectOfType<Timer>();
 	}
 	

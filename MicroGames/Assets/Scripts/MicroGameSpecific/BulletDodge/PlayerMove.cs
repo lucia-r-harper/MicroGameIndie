@@ -14,10 +14,12 @@ public class PlayerMove : MonoBehaviour
     protected float verticalInputValue;
     protected float horizontalInputValue;
 
+    SpriteRenderer spriteRenderer;
+
 	// Use this for initialization
 	void Start ()
     {
-		
+        spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -29,6 +31,22 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         UpdateMove();
+        if (spriteRenderer != null)
+        {
+            OrientBasedOnDirection();
+        }
+    }
+
+    private void OrientBasedOnDirection()
+    {
+        if (horizontalInputValue < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else
+        {
+            spriteRenderer.flipX = false;
+        }
     }
 
     protected virtual void UpdateMoveValues()

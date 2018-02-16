@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55777860}
   - component: {fileID: 55777859}
+  - component: {fileID: 55777861}
   m_Layer: 0
   m_Name: Big_Fish
   m_TagString: Untagged
@@ -186,6 +187,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &55777861
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 55777858}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 95d83b61f0b35744da848fd7d7c3a0bf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &127583246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,6 +1107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 931511661}
   - component: {fileID: 931511660}
+  - component: {fileID: 931511662}
   m_Layer: 0
   m_Name: College_Student
   m_TagString: Untagged
@@ -1153,6 +1172,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &931511662
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 931511659}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b40483410f97c1a46aefaa9c14fa25b0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1010678202
 GameObject:
   m_ObjectHideFlags: 0
@@ -2554,7 +2590,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.0000050862727, y: -80.00002}
-  m_SizeDelta: {x: -40, y: 80}
+  m_SizeDelta: {x: -40, y: 105.1}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1671975734
 MonoBehaviour:
@@ -2590,7 +2626,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Lucia Rae Harper : Design, Programming
 
-    Kyle Dorr: Art'
+    Kyle Dorr: Art
+
+    Patrick Casey: Music'
 --- !u!222 &1671975735
 CanvasRenderer:
   m_ObjectHideFlags: 0

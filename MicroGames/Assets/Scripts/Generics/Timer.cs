@@ -66,6 +66,7 @@ public class Timer : MonoBehaviour
 
     private IEnumerator CountDown()
     {
+        yield return timeCountDownRate;
         while (microgameState == PlayingState.Playing)
         {
             yield return timeCountDownRate;

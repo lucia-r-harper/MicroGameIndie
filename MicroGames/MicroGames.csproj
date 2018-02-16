@@ -319,6 +319,7 @@
     <Compile Include="Assets\Scripts\MicroGameSpecific\BulletDodge\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\BulletDodge\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\BulletDodge\RandomBulletSpawner.cs" />
+    <Compile Include="Assets\Scripts\MicroGameSpecific\MashButton\AnimationHandlerForFish.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\MashButton\Goal.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\MashButton\MashSpaceToMove.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\Pong\PongAI.cs" />

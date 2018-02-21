@@ -7,11 +7,13 @@ public class BulletDodgeMovementAnimations : MonoBehaviour
     private Animator animator;
     private PlayerMove playerMove;
     private Timer timer;
+    private Rigidbody2D rigidBody;
 
 	// Use this for initialization
 	void Start ()
     {
         animator = GetComponent<Animator>();
+        rigidBody = GetComponent<Rigidbody2D>();
         playerMove = GetComponent<PlayerMove>();
         timer = FindObjectOfType<Timer>();
     }
@@ -34,6 +36,11 @@ public class BulletDodgeMovementAnimations : MonoBehaviour
             {
                 animator.SetBool("isplayerrunning", false);
             }
+        }
+        else
+        {
+            animator.SetBool("isplayerdead", true);
+            rigidBody.gravityScale = 1;
         }
     }
 }

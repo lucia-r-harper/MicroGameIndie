@@ -800,8 +800,8 @@ GameObject:
   - component: {fileID: 1475431505}
   - component: {fileID: 1475431504}
   - component: {fileID: 1475431506}
-  - component: {fileID: 1475431507}
   - component: {fileID: 1475431508}
+  - component: {fileID: 1475431507}
   m_Layer: 0
   m_Name: MovingTarget
   m_TagString: target
@@ -877,8 +877,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90660a7261cb6b64ca73787d2cacd892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &1475431507
-CircleCollider2D:
+--- !u!61 &1475431507
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -890,8 +890,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 3}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1
+  m_Size: {x: 1.5, y: 3}
+  m_EdgeRadius: 0
 --- !u!50 &1475431508
 Rigidbody2D:
   serializedVersion: 4

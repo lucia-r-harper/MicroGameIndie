@@ -26,7 +26,7 @@ public class BulletDodgeMovementAnimations : MonoBehaviour
     {
         if (timer.MicroGameState != PlayingState.Lost)
         {
-            if (Mathf.Abs(Input.GetAxis(playerMove.HorizontalInput)) > 0 || Mathf.Abs(Input.GetAxis(playerMove.HorizontalInput)) > 0)
+            if (Mathf.Abs(Input.GetAxis(playerMove.HorizontalInput)) > 0 || Mathf.Abs(Input.GetAxis(playerMove.VerticalInput)) > 0)
             {
                 animator.SetBool("isplayerrunning", true);
             }

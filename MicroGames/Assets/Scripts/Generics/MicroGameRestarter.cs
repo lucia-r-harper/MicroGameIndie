@@ -63,7 +63,14 @@ public class MicroGameRestarter : MonoBehaviour
             microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
         }
         yield return transitionDelay;
-        SceneManager.LoadScene(microgameToLoad);
+        if (MetaGameManager.IsGameOver)
+        {
+            MetaGameManager.GameOver();
+        }
+        else
+        {
+            SceneManager.LoadScene(microgameToLoad);
+        }
         yield return transitionDelay;
     }
 

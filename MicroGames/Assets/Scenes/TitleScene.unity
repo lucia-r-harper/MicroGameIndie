@@ -961,6 +961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 715819895}
   - component: {fileID: 715819894}
+  - component: {fileID: 715819896}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -1025,6 +1026,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &715819896
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 715819893}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2e98d696feb6f4645a167cf8d5557fe4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &822212203
 GameObject:
   m_ObjectHideFlags: 0

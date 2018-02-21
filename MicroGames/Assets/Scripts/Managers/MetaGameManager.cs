@@ -23,6 +23,21 @@ public class MetaGameManager : MonoBehaviour
         }
     }
 
+    public static bool IsGameOver
+    {
+        get
+        {
+            if (lives <= 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+
     // Use this for initialization
     void Start ()
     {
@@ -49,13 +64,13 @@ public class MetaGameManager : MonoBehaviour
     public static void LoseLife()
     {
         lives--;
-        if (lives <= 0)
-        {
-            GameOver();
-        }
+        //if (lives <= 0)
+        //{
+        //    GameOver();
+        //}
     }
 
-    private static void GameOver()
+    public static void GameOver()
     {
         resetLivesAndScore();
         SceneManager.LoadScene(GameOverScene);

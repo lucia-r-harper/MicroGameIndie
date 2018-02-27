@@ -11,12 +11,19 @@ public class Abductee : ObjectRandomMovement
 
     private float difficultySpeedAdjustmentScaling = 10;
 
+    private bool isAbducted;
+
+    private AudioSource audioSource;
+
+    private const int abductionRotationSpeed = 20;
+
 	// Use this for initialization
 	void Start ()
     {
+        isAbducted = false;
+        audioSource = GetComponent<AudioSource>();
         AdjustSpeedForDifficulty();
         timeUntilChangesMovement = new WaitForSeconds(TimeUntilChangesMovement);
-        //SetRandomMovementAndSpeed();
         StartCoroutine(SetNewMovementBasedOnIntervalOfTime());
 	}
 
@@ -28,7 +35,7 @@ public class Abductee : ObjectRandomMovement
 
     private IEnumerator SetNewMovementBasedOnIntervalOfTime()
     {
-        while (true)
+        while (isAbducted == false)
         {
             SetRandomMovementAndSpeed();
             yield return timeUntilChangesMovement;
@@ -38,11 +45,29 @@ public class Abductee : ObjectRandomMovement
     // Update is called once per frame
     void Update ()
     {
-		
+        if (isAbducted == true)
+        {
+            RotateWhileAbducted();
+        }
 	}
+
 
     private void FixedUpdate()
     {
         MoveFixedUpdate();
+    }
+
+    public void GetAbducted(Transform AZParentToSet)
+    {
+        isAbducted = true;
+        speed = 0;
+        audioSource.Play();
+        transform.SetParent(AZParentToSet);
+        transform.localPosition = new Vector3(0, 0, 0);
+    }
+
+    private void RotateWhileAbducted()
+    {
+        transform.Rotate(transform.forward, abductionRotationSpeed);
     }
 }

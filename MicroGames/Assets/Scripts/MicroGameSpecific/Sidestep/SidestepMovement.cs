@@ -6,7 +6,7 @@ using UnityEngine;
 public class SidestepMovement : MonoBehaviour
 {
     public float ForwardMovementSpeed;
-    public int HorizontalMovementAmount = 1;
+    public float HorizontalMovementAmount = 1;
     public string HorizontalInput;
 
     private float horizontalInputValue;
@@ -42,14 +42,21 @@ public class SidestepMovement : MonoBehaviour
                 transform.Translate(-HorizontalMovementAmount, 0, 0);
             }
         }
-        else
-        {
-            horizontalInputValue = 0;
-        }
+        horizontalInputValue = 0;
     }
 
     private void MoveForward()
     {
         transform.Translate(0, ForwardMovementSpeed, 0);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Die();
+    }
+
+    private void Die()
+    {
+        ForwardMovementSpeed = 0;
     }
 }

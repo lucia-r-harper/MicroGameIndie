@@ -46,6 +46,7 @@ public class AbductionZone : MonoBehaviour
 
     public void Deactivate()
     {
+        audioSource.Stop();
         spriteRenderer.enabled = false;
         abductionZoneTrigger.enabled = false;
     }

@@ -11,6 +11,7 @@ public class HeroFlyMovement : MonoBehaviour
 
     private Rigidbody2D playerRigidbody2D;
     private Vector2 flyForwardVector2;
+    private HeroFlySounds heroFlySounds;
 
     private Timer timer;
 
@@ -19,6 +20,7 @@ public class HeroFlyMovement : MonoBehaviour
     {
         playerRigidbody2D = GetComponent<Rigidbody2D>();
         timer = FindObjectOfType<Timer>();
+        heroFlySounds = GetComponent<HeroFlySounds>();
         //flyForwardVector2 = new Vector2(FlyForwardMovement, 0);
 	}
 	
@@ -39,6 +41,7 @@ public class HeroFlyMovement : MonoBehaviour
         if (Input.GetButtonDown(FlyButton) && timer.MicroGameState == PlayingState.Playing)
         {
             playerRigidbody2D.AddForce(transform.up * FlyUpThrust);
+            heroFlySounds.PlayWhoosh();
         }
     }
     private void FlyForward()

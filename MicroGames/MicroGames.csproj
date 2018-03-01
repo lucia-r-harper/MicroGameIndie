@@ -282,7 +282,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Generics\ButtonAnimator.cs" />
+    <Compile Include="Assets\Scripts\AnimatedButton.cs" />
     <Compile Include="Assets\Scripts\Generics\CameraFollowScript.cs" />
     <Compile Include="Assets\Scripts\Generics\MicroGameRestarter.cs" />
     <Compile Include="Assets\Scripts\Generics\ObjectRandomMovement.cs" />

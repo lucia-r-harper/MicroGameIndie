@@ -6,6 +6,7 @@ public class Meteor : MonoBehaviour
 {
     private Transform target;
     private float speed = 0.75f;
+    private const float difficultyScaleRate = 20;
     public Transform Target
     {
         set
@@ -16,7 +17,7 @@ public class Meteor : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-		
+        speed += MetaGameManager.Difficulty / difficultyScaleRate;
 	}
 	
 	// Update is called once per frame

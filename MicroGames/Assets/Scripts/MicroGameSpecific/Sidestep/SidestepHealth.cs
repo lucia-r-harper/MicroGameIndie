@@ -29,6 +29,7 @@ public class SidestepHealth : MonoBehaviour
         Die();
     }
 
+
     private void Die()
     {
         timer.MicroGameState = PlayingState.Lost;

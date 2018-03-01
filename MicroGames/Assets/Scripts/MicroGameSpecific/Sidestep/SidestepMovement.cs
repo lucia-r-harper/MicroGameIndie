@@ -10,6 +10,7 @@ public class SidestepMovement : MonoBehaviour
     public string HorizontalInput;
 
     private float horizontalInputValue;
+    private const float horizontalLimit = 8;
 
 	// Use this for initialization
 	void Start ()
@@ -33,11 +34,11 @@ public class SidestepMovement : MonoBehaviour
         if (Input.GetButtonDown(HorizontalInput))
         {
             horizontalInputValue = Input.GetAxis(HorizontalInput);
-            if (horizontalInputValue > 0)
+            if (horizontalInputValue > 0 && Mathf.Abs(transform.position.x + HorizontalMovementAmount) >horizontalLimit)
             {
                 transform.Translate(HorizontalMovementAmount, 0, 0);
             }
-            if (horizontalInputValue < 0)
+            if (horizontalInputValue < 0 && Mathf.Abs(transform.position.x + HorizontalMovementAmount) > horizontalLimit)
             {
                 transform.Translate(-HorizontalMovementAmount, 0, 0);
             }

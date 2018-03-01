@@ -302,6 +302,7 @@
     <Compile Include="Assets\Scripts\MicroGameSpecific\BulletDodge\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\BulletDodge\RandomBulletSpawner.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\HeroFly\HeroFlyAnimator.cs" />
+    <Compile Include="Assets\Scripts\MicroGameSpecific\HeroFly\HeroFlyConstantForce.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\HeroFly\HeroFlyHealth.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\HeroFly\HeroFlyMovement.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\HeroFly\HeroFlySounds.cs" />

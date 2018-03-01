@@ -2221,6 +2221,7 @@ GameObject:
   - component: {fileID: 1322101209}
   - component: {fileID: 1322101205}
   - component: {fileID: 1322101208}
+  - component: {fileID: 1322101214}
   - component: {fileID: 1322101210}
   - component: {fileID: 1322101212}
   m_Layer: 0
@@ -2342,7 +2343,7 @@ ConstantForce2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1322101201}
   m_Enabled: 1
-  m_Force: {x: 3, y: 0}
+  m_Force: {x: 1, y: 0}
   m_RelativeForce: {x: 0, y: 0}
   m_Torque: 0
 --- !u!114 &1322101208
@@ -2558,6 +2559,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1322101214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1322101201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f72c9a62323eb4891e3ff340fdfa97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1392773605
 GameObject:
   m_ObjectHideFlags: 0
@@ -2581,7 +2593,7 @@ Transform:
   m_GameObject: {fileID: 1392773605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1, z: 1}
   m_Children:
   - {fileID: 1524906622}
   - {fileID: 175756176}

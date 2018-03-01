@@ -17,14 +17,16 @@ public class GameOverManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        CheckToRestart();
+        //Restart();
 	}
 
-    private void CheckToRestart()
+    public void Restart()
     {
-        if (Input.GetButtonDown("Jump"))
-        {
-            SceneManager.LoadScene(TitleSceenScene);
-        }
+        SceneManager.LoadScene(TitleSceenScene);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

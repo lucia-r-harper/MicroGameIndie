@@ -10,7 +10,8 @@ public class SidestepMovement : MonoBehaviour
     public string HorizontalInput;
 
     private float horizontalInputValue;
-    private const float horizontalLimit = 8;
+    private const float horizontalLimit = 7.5f;
+    private bool isDead = false;
 
 	// Use this for initialization
 	void Start ()
@@ -21,7 +22,10 @@ public class SidestepMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        CheckForSidestepMovement();
+        if (isDead != true)
+        {
+            CheckForSidestepMovement();
+        }
 	}
 
 
@@ -34,11 +38,11 @@ public class SidestepMovement : MonoBehaviour
         if (Input.GetButtonDown(HorizontalInput))
         {
             horizontalInputValue = Input.GetAxis(HorizontalInput);
-            if (horizontalInputValue > 0 && Mathf.Abs(transform.position.x + HorizontalMovementAmount) >horizontalLimit)
+            if (horizontalInputValue > 0 && transform.position.x < horizontalLimit)
             {
                 transform.Translate(HorizontalMovementAmount, 0, 0);
             }
-            if (horizontalInputValue < 0 && Mathf.Abs(transform.position.x + HorizontalMovementAmount) > horizontalLimit)
+            if (horizontalInputValue < 0 && transform.position.x > -horizontalLimit)
             {
                 transform.Translate(-HorizontalMovementAmount, 0, 0);
             }
@@ -59,5 +63,6 @@ public class SidestepMovement : MonoBehaviour
     private void Die()
     {
         ForwardMovementSpeed = 0;
+        isDead = true;
     }
 }

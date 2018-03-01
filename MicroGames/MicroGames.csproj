@@ -320,6 +320,7 @@
     <Compile Include="Assets\Scripts\MicroGameSpecific\Pong\PongGoal.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\Sidestep\SidestepHealth.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\Sidestep\SidestepMovement.cs" />
+    <Compile Include="Assets\Scripts\MicroGameSpecific\Sidestep\TollBoothSpawner.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\TargetShoot\GameLoss.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\TargetShoot\MovingTarget.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\TargetShoot\PlayerShoot.cs" />

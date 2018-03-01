@@ -8,6 +8,8 @@ Assets/Scenes/MashButton.unity
 Assets/Scenes/AbductGame.unity
 Assets/Scenes/Pong.unity
 Assets/Scenes/PlanetDefense.unity
+Assets/Scenes/HeroFly.unity
+Assets/Scenes/Sidestep.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -89,7 +91,7 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MovingTarget
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SateliteShot
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.AbductionZone
+8210f50d3a0678b39026d13845c4567d Assembly-CSharp.dll:.AbductionZone
 da0e7389650cb2c5706ecc432cb57bb1 Assembly-CSharp.dll:.MashSpaceToMove
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GameLoss
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -120,6 +122,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+6e4bb45aea8c2c7f958e146e092032a5 Assembly-CSharp.dll:.HeroFlySounds
 36a0f15d808ab8511e8e51ac86160edb Assembly-CSharp.dll:.MicroGameManager
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
@@ -129,10 +132,13 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 817247798b886ee4fb24e15580cdc0b2 Assembly-CSharp.dll:.Abductee
+49cd62a578efc0a599b810a2b66cd49c Assembly-CSharp.dll:.AnimatedButton
 1193af550804726e3c8095fa77cf32d2 Assembly-CSharp.dll:.PlayerHealth
 d22c5af8b82f8c0b21a16f2f555936f4 Assembly-CSharp.dll:.PongGoal
 d632f00e5c41578cc8ee6151aa126a47 Assembly-CSharp.dll:.RandomBulletSpawner
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SidestepHealth
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ShotFired
+e6f640fa2a67691963209e34b17f8545 Assembly-CSharp.dll:.CameraFollowScript
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 56c24a6952aa732905927098e8518dc9 Assembly-CSharp.dll:.PlayerShoot
@@ -157,6 +163,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 a486f90ef9b0e097f4b5f1a7487c3519 Assembly-CSharp.dll:.TimerChecker
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MicroGameRestarter
 93b4b671e730aa32ef852bf7968c56aa Assembly-CSharp.dll:.MeteorManager
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HeroFlyConstantForce
 84d0c4e5561841c921e79ae2a22bb1c6 Assembly-CSharp.dll:.PlayerSateliteMovement
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
@@ -165,17 +172,22 @@ a486f90ef9b0e097f4b5f1a7487c3519 Assembly-CSharp.dll:.TimerChecker
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 76a891860143848d0b61b1f0ba562075 Assembly-CSharp.dll:.TitleScreenManager
 f358a5a310a8b4b6697ea08443aca620 Assembly-CSharp.dll:.Timer
+a79de1f15746dc272c78e131fb7e3226 Assembly-CSharp.dll:.TollBoothSpawner
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 95376575a6b716df1cb77057bf625e75 Assembly-CSharp.dll:.PressSpaceToAbduct
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HeroFlyHealth
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Meteor
+5f8459b861ab6f4748d365906b263f31 Assembly-CSharp.dll:.Meteor
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.BulletDodgeMovementAnimations
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Planet
+8e1da0d5eb1a9f827208f88c805be9e8 Assembly-CSharp.dll:.Planet
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HeroFlyAnimator
 31316aadfb4312f2b971a095fdba8f82 Assembly-CSharp.dll:.GameOverManager
+f84cc418a0eb0a5948ed2446242f271c Assembly-CSharp.dll:.SidestepMovement
 12a37f1c7c3d5e1c7037b7a1096c5ecb Assembly-CSharp.dll:.ObjectRandomMovement
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ApplicationQuiter
+05205f60d404bf1a54ab36b56969653e Assembly-CSharp.dll:.HeroFlyMovement

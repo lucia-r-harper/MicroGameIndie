@@ -7,17 +7,19 @@ using UnityEngine.SceneManagement;
 public class MicroGameRestarter : MonoBehaviour
 {
     //public string newSceneToLoad = "testScene";
-
+    
     private int firstMicrogame = 2;
     private int lastMicrogame = 10;
 
     private Timer currentTimer;
+    private Scene[] microGames;
 
     private WaitForSeconds transitionDelay = new WaitForSeconds(1);
     
 	// Use this for initialization
 	void Start ()
     {
+        //microGames = 
         currentTimer = GameObject.FindObjectOfType<Timer>();
 	}
 	

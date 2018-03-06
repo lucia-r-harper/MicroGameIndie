@@ -15,12 +15,6 @@ public class PongGoal : MonoBehaviour
         timer = FindObjectOfType<Timer>();
 	}
 	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<PongBallMovement>() != null && timer.MicroGameState == PlayingState.Playing)

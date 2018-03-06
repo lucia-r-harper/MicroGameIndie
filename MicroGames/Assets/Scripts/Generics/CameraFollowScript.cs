@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Attach to GameObject with Camera component
 public class CameraFollowScript : MonoBehaviour
 {
     public enum FollowMode { FollowX, FollowY};
@@ -10,12 +11,6 @@ public class CameraFollowScript : MonoBehaviour
     public GameObject target;
     public float followDistance;
 
-	// Use this for initialization
-	void Start ()
-    {
-		
-	}
-	
 	// Update is called once per frame
 	void Update ()
     {

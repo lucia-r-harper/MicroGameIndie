@@ -13,12 +13,6 @@ public class PlayerHealth : MonoBehaviour
     {
         timer = GameObject.Find("Timer").GetComponent<Timer>();
 	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -30,7 +24,6 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
-        //timer.ChangePlayingState(PlayingState.Lost);
         timer.MicroGameState = PlayingState.Lost;
         gameObject.GetComponent<PlayerMove>().enabled = false;
     }

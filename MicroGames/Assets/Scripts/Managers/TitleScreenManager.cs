@@ -26,12 +26,6 @@ public class TitleScreenManager : MonoBehaviour
         MainMenuPanels[0].SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update ()
-    {
-		
-	}
-
     public void ActivateMetagame()
     {
         metaGameManager.SetActive(true);

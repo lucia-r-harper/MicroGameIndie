@@ -25,12 +25,6 @@ public class MovingTarget : MonoBehaviour
         speed += MetaGameManager.Difficulty / difficultySpeedAdjustmentRate;
     }
 
-    // Update is called once per frame
-    void Update ()
-    {
-        
-	}
-
     private void FixedUpdate()
     {
         switch (timer.MicroGameState)

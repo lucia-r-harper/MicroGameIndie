@@ -12,12 +12,6 @@ public class ShotFired : MonoBehaviour
     {
         timer = GameObject.FindObjectOfType<Timer>();
     }
-	
-	// Update is called once per frame
-	void Update ()
-    {
-        
-	}
 
     private void FixedUpdate()
     {

@@ -14,16 +14,13 @@ public class HeroFlyHealth : MonoBehaviour
         timer = FindObjectOfType<Timer>();
         constantForce2D = GetComponent<ConstantForce2D>();
 	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Die();
+        if (timer.MicroGameState == PlayingState.Playing)
+        {
+            Die();
+        }
     }
 
     private void Die()

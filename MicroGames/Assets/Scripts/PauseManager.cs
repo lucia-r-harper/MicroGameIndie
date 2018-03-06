@@ -18,7 +18,6 @@ public class PauseManager : MonoBehaviour
 
     private void OnEnable()
     {
-        //popUp = GetComponentInChildren<GameObject>();
         popUp.SetActive(false);
     }
 

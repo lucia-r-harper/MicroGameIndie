@@ -58,10 +58,4 @@ public class TollBoothSpawner : MonoBehaviour
             Instantiate(tollBooth, new Vector3(xTollSpawnLocation, transform.position.y), tollBooth.transform.rotation);
         }
     }
-
-    // Update is called once per frame
-    void Update ()
-    {
-		
-	}
 }

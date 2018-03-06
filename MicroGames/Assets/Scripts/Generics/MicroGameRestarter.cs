@@ -41,11 +41,9 @@ public class MicroGameRestarter : MonoBehaviour
             case PlayingState.Playing:
                 break;
             case PlayingState.Lost:
-                //MetaGameManager.LoseLife();
                 StartCoroutine(ChangeMicroGame());
                 break;
             case PlayingState.Won:
-                //MetaGameManager.WinGame();
                 StartCoroutine(ChangeMicroGame());
                 break;
             default:
@@ -56,13 +54,14 @@ public class MicroGameRestarter : MonoBehaviour
     public IEnumerator ChangeMicroGame()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
-        //int microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
+
         int microgameToLoad = availableMicroGames[UnityEngine.Random.Range(0, availableMicroGames.Count)];
 
-        //if (microgameToLoad == currentScene)
-        //{
-        //    microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
-        //}
+        //precaution, if the microgame is the same, try again
+        if (microgameToLoad == currentScene)
+        {
+            microgameToLoad = availableMicroGames[UnityEngine.Random.Range(0, availableMicroGames.Count)];
+        }
 
         yield return transitionDelay;
         if (MetaGameManager.IsGameOver)
@@ -79,12 +78,11 @@ public class MicroGameRestarter : MonoBehaviour
     public void StartSession()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
-        //int microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
+
         int microgameToLoad = availableMicroGames[UnityEngine.Random.Range(0, availableMicroGames.Count)];
 
         if (microgameToLoad == currentScene)
         {
-            //microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
             microgameToLoad = availableMicroGames[UnityEngine.Random.Range(0, availableMicroGames.Count)];
         }
         SceneManager.LoadScene(microgameToLoad);

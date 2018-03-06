@@ -17,13 +17,6 @@ public class PongBallMovement : ObjectRandomMovement
 
     }
 
-
-    // Update is called once per frame
-    void Update ()
-    {
-		
-	}
-
     private void SetSpeedBasedOnDifficulty()
     {
         speed += MetaGameManager.Difficulty / difficultySpeedAdjustmentRate;

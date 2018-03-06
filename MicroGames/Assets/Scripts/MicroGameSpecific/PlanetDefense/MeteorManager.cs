@@ -13,7 +13,8 @@ public class MeteorManager : MonoBehaviour
 
     private float XBorderExtent = 8.875f;
     private float YBorderExtent = 5.0f;
-    //rename to be better
+
+    //Buffer that ensures meteors spawn outside of the camera rect
     public float BorderBufferZone = 1.0f;
 
     private Timer timer;
@@ -30,12 +31,6 @@ public class MeteorManager : MonoBehaviour
         StartCoroutine(SpawnMeteors());
 	}
 
-
-    // Update is called once per frame
-    void Update ()
-    {
-		
-	}
     private IEnumerator SpawnMeteors()
     {
         while (timer.MicroGameState == PlayingState.Playing)

@@ -8,12 +8,6 @@ public class PlayerShoot : MonoBehaviour
     public string shootingButton = "Jump";
     public GameObject shotFired;
     public int shotLimit = 1;
-
-	// Use this for initialization
-	void Start ()
-    {
-		
-	}
 	
 	// Update is called once per frame
 	void Update ()

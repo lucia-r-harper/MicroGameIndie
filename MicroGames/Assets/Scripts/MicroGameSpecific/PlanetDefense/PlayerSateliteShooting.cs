@@ -8,12 +8,6 @@ public class PlayerSateliteShooting : MonoBehaviour
     public string ShootButton;
     public SateliteShot SateliteShotPrefab;
 
-	// Use this for initialization
-	void Start ()
-    {
-		
-	}
-	
 	// Update is called once per frame
 	void Update ()
     {

@@ -34,10 +34,4 @@ public class RandomBulletSpawner : MonoBehaviour
         Vector3 spawnVector = new Vector3(UnityEngine.Random.Range(-XBorderExtent, XBorderExtent), UnityEngine.Random.Range(-YBorderExtent, YBorderExtent));
         Instantiate(bullet, spawnVector, bullet.transform.rotation);
     }
-
-    // Update is called once per frame
-    void Update ()
-    {
-
-	}
 }

@@ -21,7 +21,6 @@ public class HeroFlyMovement : MonoBehaviour
         playerRigidbody2D = GetComponent<Rigidbody2D>();
         timer = FindObjectOfType<Timer>();
         heroFlySounds = GetComponent<HeroFlySounds>();
-        //flyForwardVector2 = new Vector2(FlyForwardMovement, 0);
 	}
 	
 	// Update is called once per frame
@@ -29,11 +28,6 @@ public class HeroFlyMovement : MonoBehaviour
     {
         UpdateFlyUp();
 	}
-
-    private void FixedUpdate()
-    {
-        FlyForward();
-    }
 
 
     private void UpdateFlyUp()
@@ -43,10 +37,5 @@ public class HeroFlyMovement : MonoBehaviour
             playerRigidbody2D.AddForce(transform.up * FlyUpThrust);
             heroFlySounds.PlayWhoosh();
         }
-    }
-    private void FlyForward()
-    {
-        //playerRigidbody2D.AddForce(transform.right * FlyForwardMovement);
-        //playerRigidbody2D.MovePosition(playerRigidbody2D.position + flyForwardVector2);
     }
 }

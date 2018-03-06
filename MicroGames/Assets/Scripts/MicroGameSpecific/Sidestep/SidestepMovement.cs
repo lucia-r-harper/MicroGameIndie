@@ -13,12 +13,6 @@ public class SidestepMovement : MonoBehaviour
     private const float horizontalLimit = 7.5f;
     private bool isDead = false;
 
-	// Use this for initialization
-	void Start ()
-    {
-		
-	}
-	
 	// Update is called once per frame
 	void Update ()
     {

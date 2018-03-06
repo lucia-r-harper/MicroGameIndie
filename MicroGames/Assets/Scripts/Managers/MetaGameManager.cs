@@ -64,10 +64,6 @@ public class MetaGameManager : MonoBehaviour
     public static void LoseLife()
     {
         lives--;
-        //if (lives <= 0)
-        //{
-        //    GameOver();
-        //}
     }
 
     public static void GameOver()

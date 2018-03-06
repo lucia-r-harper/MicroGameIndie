@@ -13,12 +13,6 @@ public class GameOverManager : MonoBehaviour
         Destroy(GameObject.Find("MetaGame"));
         Destroy(GameObject.Find("ApplicationQuitter"));
 	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-        //Restart();
-	}
 
     public void Restart()
     {

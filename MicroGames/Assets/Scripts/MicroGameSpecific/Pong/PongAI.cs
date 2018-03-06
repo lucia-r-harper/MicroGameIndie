@@ -13,12 +13,6 @@ public class PongAI : MonoBehaviour
         pongBall = GameObject.FindObjectOfType<PongBallMovement>();
 	}
 	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
-
     private void FixedUpdate()
     {
         FollowPongBall();

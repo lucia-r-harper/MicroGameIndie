@@ -8,6 +8,7 @@ public enum PlayingState { Playing, Lost, Won}
 //TO BE ATTACHED TO TIMER TEXT COMPONENT
 public class Timer : MonoBehaviour
 {
+    public Sprite[] timerImages;
     public int timeLimit;
     public string newSceneToLoad = "testScene";
 
@@ -21,6 +22,7 @@ public class Timer : MonoBehaviour
     }
 
     private Text timerText;
+    private Image timerImage;
     private WaitForSeconds timeCountDownRate = new WaitForSeconds(1);
 
     private bool isCountingDown = true;
@@ -54,7 +56,8 @@ public class Timer : MonoBehaviour
 
     private void Awake()
     {
-        timerText = GetComponent<Text>();
+        timerText = GetComponentInChildren<Text>();
+        timerImage = GetComponentInChildren<Image>();
     }
 
     // Use this for initialization
@@ -71,10 +74,6 @@ public class Timer : MonoBehaviour
         {
             yield return timeCountDownRate;
             seconds--;
-            //if (seconds == 0)
-            //{
-            //    microgameState = PlayingState.Won;
-            //}
         }
     }
 
@@ -82,20 +81,19 @@ public class Timer : MonoBehaviour
     void Update ()
     {
         UpdateTimerText();
-        //UpdateCheckToRestart();
+        UpdateTimerImage();
 	}
 
+    private void UpdateTimerImage()
+    {
+        if (seconds >= 0)
+        {
+            timerImage.sprite = timerImages[seconds];
+        }
+    }
 
     private void UpdateTimerText()
     {
-        //if (isCountingDown)
-        //{
-        //    timerText.text = seconds.ToString();
-        //}
-        //else
-        //{
-        //    timerText.text = "Finished!";
-        //}
         switch (microgameState)
         {
             case PlayingState.Playing:
@@ -111,33 +109,6 @@ public class Timer : MonoBehaviour
                 break;
         }
     }
-    //private void UpdateCheckToRestart()
-    //{
-    //    switch (microgameState)
-    //    {
-    //        case PlayingState.Playing:
-    //            break;
-    //        case PlayingState.Lost:
-    //            if (Input.GetButton("Jump"))
-    //            {
-    //                Restart();
-    //            }
-    //            break;
-    //        case PlayingState.Won:
-    //            if (Input.GetButton("Jump"))
-    //            {
-    //                Restart();
-    //            }
-    //            break;
-    //        default:
-    //            break;
-    //    }
-    //}
-
-    //private void Restart()
-    //{
-    //    SceneManager.LoadScene(newSceneToLoad);
-    //}
 
     public void ChangePlayingState(PlayingState stateToChangeTo)
     {

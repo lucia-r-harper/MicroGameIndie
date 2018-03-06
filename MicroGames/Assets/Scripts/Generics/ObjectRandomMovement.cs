@@ -26,12 +26,6 @@ public class ObjectRandomMovement : MonoBehaviour
         speed = UnityEngine.Random.Range(minSpeed, maxSpeed);
     }
 
-    // Update is called once per frame
-    void Update ()
-    {
-		
-	}
-
     private void FixedUpdate()
     {
         MoveFixedUpdate();

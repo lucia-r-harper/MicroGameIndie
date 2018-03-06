@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// Class Currently Does not work!!! Consider removing outright
+/// </summary>
 //Attach me to camera
 [RequireComponent(typeof(BoxCollider2D))]
 public class ScreenBorder : MonoBehaviour
@@ -23,16 +27,4 @@ public class ScreenBorder : MonoBehaviour
     {
         boxCollider.size = new Vector2(mainCamera.rect.x, mainCamera.rect.y);
     }
-
-    // Use this for initialization
-    void Start ()
-    {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 }

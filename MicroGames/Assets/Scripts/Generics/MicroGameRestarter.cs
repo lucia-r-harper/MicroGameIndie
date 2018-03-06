@@ -12,14 +12,16 @@ public class MicroGameRestarter : MonoBehaviour
     private int lastMicrogame = 10;
 
     private Timer currentTimer;
-    private Scene[] microGames;
+    //private Scene[] microGames;
+    private List<int> availableMicroGames = new List<int>();
 
     private WaitForSeconds transitionDelay = new WaitForSeconds(1);
     
 	// Use this for initialization
 	void Start ()
     {
-        //microGames = 
+        //refactor me, I'm slow as all hell
+        availableMicroGames = GameObject.FindObjectOfType<MicroGameManager>().MicroGamesInPlayIndexes;
         currentTimer = GameObject.FindObjectOfType<Timer>();
 	}
 	
@@ -54,16 +56,14 @@ public class MicroGameRestarter : MonoBehaviour
     public IEnumerator ChangeMicroGame()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
-        int microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
+        //int microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
+        int microgameToLoad = availableMicroGames[UnityEngine.Random.Range(0, availableMicroGames.Count)];
 
         //if (microgameToLoad == currentScene)
         //{
         //    microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
         //}
-        while (microgameToLoad == currentScene)
-        {
-            microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
-        }
+
         yield return transitionDelay;
         if (MetaGameManager.IsGameOver)
         {
@@ -79,11 +79,13 @@ public class MicroGameRestarter : MonoBehaviour
     public void StartSession()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
-        int microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
+        //int microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
+        int microgameToLoad = availableMicroGames[UnityEngine.Random.Range(0, availableMicroGames.Count)];
 
         if (microgameToLoad == currentScene)
         {
-            microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
+            //microgameToLoad = UnityEngine.Random.Range(firstMicrogame, lastMicrogame);
+            microgameToLoad = availableMicroGames[UnityEngine.Random.Range(0, availableMicroGames.Count)];
         }
         SceneManager.LoadScene(microgameToLoad);
     }

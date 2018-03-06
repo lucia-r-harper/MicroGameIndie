@@ -7,8 +7,9 @@ using UnityEngine.UI;
 
 public class MicroGameManager : MonoBehaviour
 {
-    public List<Scene> MicroGamesInPlay = new List<Scene>();
-    private Toggle[] customMicroGameToggles = new Toggle[8];
+    //public List<Scene> MicroGamesInPlay = new List<Scene>();
+    public List<int> MicroGamesInPlayIndexes = new List<int>();
+    public Toggle[] customMicroGameToggles = new Toggle[8];
     //figure out how to watch me!
     private List<Scene> microGameLevels = new List<Scene>();
     private List<Scene> discardedMicroGameLevels = new List<Scene>();
@@ -20,30 +21,9 @@ public class MicroGameManager : MonoBehaviour
 	void Start ()
     {
         DontDestroyOnLoad(this);
-        customMicroGameToggles = FindObjectsOfType<Toggle>();
+        //customMicroGameToggles = FindObjectsOfType<Toggle>();
         //PopulateMicroGameLevelsList();
 	}
-
-    //private void PopulateMicroGameLevelsList()
-    //{
-    //    foreach (string microGameLevelName in microGameLevelNames)
-    //    {
-    //        microGameLevels.Add(SceneManager.GetSceneByName(microGameLevelName));
-    //    }
-    //}
-
-    //public void PickRandomMicroGame()
-    //{
-    //    int microgameToLoad = UnityEngine.Random.Range(0, microGameLevels.Count);
-    //    SceneManager.LoadScene(microgameToLoad);
-    //    DiscardLevel(microgameToLoad);
-    //}
-
-    //private void DiscardLevel(int microgameToDiscard)
-    //{
-    //    microGameLevels.Remove(SceneManager.GetSceneAt(microgameToDiscard));
-    //    discardedMicroGameLevels.Add(SceneManager.GetSceneAt(microgameToDiscard));
-    //}
 
     public void AssignMicroGamesInPlay()
     {
@@ -51,12 +31,13 @@ public class MicroGameManager : MonoBehaviour
 
         foreach (Toggle toggle in customMicroGameToggles)
         {
-            //better way to do this?
-            i++;
             if (toggle.isOn)
             {
-                MicroGamesInPlay.Add(SceneManager.GetSceneAt(i));
+                //Debug.Log(SceneManager.sceneCount);
+                MicroGamesInPlayIndexes.Add(i + sceneIntLocationBuffer);
             }
+            //better way to do this?
+            i++;
         }
     }
     

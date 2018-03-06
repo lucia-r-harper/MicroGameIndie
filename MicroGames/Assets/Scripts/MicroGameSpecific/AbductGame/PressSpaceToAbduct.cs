@@ -18,7 +18,6 @@ public class PressSpaceToAbduct : MonoBehaviour
         playerMove = GetComponent<PlayerMove>();
         defaultMoveSpeed = playerMove.speed;
         abductionZone = GetComponentInChildren<AbductionZone>();
-        abductionZone.Deactivate();
 	}
 	
 	// Update is called once per frame

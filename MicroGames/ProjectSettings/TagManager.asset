@@ -47,6 +47,9 @@ TagManager:
   - name: Background
     uniqueID: 285858257
     locked: 0
+  - name: ScrollingBackground
+    uniqueID: 2128288899
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

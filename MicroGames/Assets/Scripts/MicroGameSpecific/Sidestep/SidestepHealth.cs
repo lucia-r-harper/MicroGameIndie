@@ -7,6 +7,7 @@ public class SidestepHealth : MonoBehaviour
 {
     private bool isDead;
     private Timer timer;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -19,7 +20,6 @@ public class SidestepHealth : MonoBehaviour
     {
         if (isDead)
         {
-            Spinout();
         }
 	}
 
@@ -34,9 +34,5 @@ public class SidestepHealth : MonoBehaviour
     {
         timer.MicroGameState = PlayingState.Lost;
         isDead = false;
-    }
-    private void Spinout()
-    {
-
     }
 }

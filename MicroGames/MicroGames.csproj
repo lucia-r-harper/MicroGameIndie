@@ -303,6 +303,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Generics\BackgroundMoveScript.cs" />
     <Compile Include="Assets\Scripts\Generics\CameraFollowScript.cs" />
     <Compile Include="Assets\Scripts\Generics\MicroGameRestarter.cs" />
     <Compile Include="Assets\Scripts\Generics\ObjectRandomMovement.cs" />
@@ -340,6 +341,7 @@
     <Compile Include="Assets\Scripts\MicroGameSpecific\Pong\PongGoal.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\Sidestep\SidestepHealth.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\Sidestep\SidestepMovement.cs" />
+    <Compile Include="Assets\Scripts\MicroGameSpecific\Sidestep\SidestepPlayerAnimator.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\Sidestep\TollBoothSpawner.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\TargetShoot\GameLoss.cs" />
     <Compile Include="Assets\Scripts\MicroGameSpecific\TargetShoot\MovingTarget.cs" />

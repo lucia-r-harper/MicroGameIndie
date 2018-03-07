@@ -8,7 +8,8 @@ using UnityEngine.UI;
 public class MicroGameManager : MonoBehaviour
 {
     public List<int> MicroGamesInPlayIndexes = new List<int>();
-    public Toggle[] customMicroGameToggles = new Toggle[8];
+    //public Toggle[] customMicroGameToggles = new Toggle[8];
+    private Toggle[] customMicroGameToggles;
 
     //used so when adding scenes that it skips the Main Menu and Game Over Scenes
     private const int sceneIntLocationBuffer = 2;
@@ -16,6 +17,7 @@ public class MicroGameManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
+        customMicroGameToggles = FindObjectOfType<MicroGameToggles>().Toggles;
         DontDestroyOnLoad(this);
 	}
 

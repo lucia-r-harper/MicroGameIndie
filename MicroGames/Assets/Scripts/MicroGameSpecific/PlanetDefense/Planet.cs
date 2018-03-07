@@ -9,6 +9,7 @@ public class Planet : MonoBehaviour
 
     private Timer timer;
     private SpriteRenderer spriteRenderer;
+    private AudioSource audioSource;
 
     private const float explosionFadeOutTime = 0.2f;
     private float explosionAlphaValue = 255;
@@ -22,6 +23,7 @@ public class Planet : MonoBehaviour
     {
         timer = FindObjectOfType<Timer>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -51,6 +53,7 @@ public class Planet : MonoBehaviour
     private void Explode()
     {
         spriteRenderer.sprite = ExplosionSprite;
+        audioSource.Play();
         isDestroyed = true;
         foreach (Rigidbody2D chunk in planetChunks)
         {

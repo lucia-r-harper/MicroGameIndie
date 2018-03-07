@@ -15,6 +15,7 @@ public class Goal : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            GetComponent<AudioSource>().Play();
             timer.MicroGameState = PlayingState.Won;
         }
     }

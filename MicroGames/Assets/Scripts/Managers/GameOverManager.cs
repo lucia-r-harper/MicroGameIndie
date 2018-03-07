@@ -11,6 +11,7 @@ public class GameOverManager : MonoBehaviour
 	void Start ()
     {
         Destroy(GameObject.Find("MetaGame"));
+        Destroy(GameObject.Find("MicroGameManager"));
         Destroy(GameObject.Find("ApplicationQuitter"));
 	}
 

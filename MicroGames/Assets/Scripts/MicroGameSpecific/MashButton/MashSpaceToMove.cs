@@ -6,12 +6,14 @@ public class MashSpaceToMove : PlayerMove
 {
     private Timer timer;
     private float difficultySpeedAdjustmentRate = 20;
+    private AudioSource audioSource;
 
     // Use this for initialization
     void Start ()
     {
         speed -= MetaGameManager.Difficulty / difficultySpeedAdjustmentRate;
         timer = GameObject.FindObjectOfType<Timer>();
+        audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -25,6 +27,7 @@ public class MashSpaceToMove : PlayerMove
         if (Input.GetButtonDown(HorizontalInput) && timer.MicroGameState == PlayingState.Playing)
         {
             horizontalInputValue = speed;
+            audioSource.Play();
         }
         else
         {

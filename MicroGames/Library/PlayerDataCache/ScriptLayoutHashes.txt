@@ -195,3 +195,4 @@ f84cc418a0eb0a5948ed2446242f271c Assembly-CSharp.dll:.SidestepMovement
 12a37f1c7c3d5e1c7037b7a1096c5ecb Assembly-CSharp.dll:.ObjectRandomMovement
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ApplicationQuiter
 05205f60d404bf1a54ab36b56969653e Assembly-CSharp.dll:.HeroFlyMovement
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CursorHider

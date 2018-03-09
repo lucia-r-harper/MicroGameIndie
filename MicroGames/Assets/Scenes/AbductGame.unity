@@ -830,6 +830,42 @@ Prefab:
       propertyPath: m_Text
       value: Abduct!
       objectReference: {fileID: 0}
+    - target: {fileID: 114408556552107538, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_Text
+      value: Abduct!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114390292790243690, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 102957f8650d6f84398e5edd6e1f5269,
+        type: 3}
+    - target: {fileID: 224409178707276656, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 204.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224409178707276656, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 51
+      objectReference: {fileID: 0}
+    - target: {fileID: 114390292790243690, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224409178707276656, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224409178707276656, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -47
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad, type: 2}
   m_IsPrefabParent: 0

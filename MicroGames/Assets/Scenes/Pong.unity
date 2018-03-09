@@ -1161,10 +1161,30 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114167708203840418, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+    - target: {fileID: 114390292790243690, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
         type: 2}
-      propertyPath: m_Text
-      value: Bounce!
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224409178707276656, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 224409178707276656, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -50.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224409178707276656, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 26.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224409178707276656, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad, type: 2}

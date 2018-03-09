@@ -2519,6 +2519,37 @@ Prefab:
       propertyPath: m_Text
       value: Fly!
       objectReference: {fileID: 0}
+    - target: {fileID: 114408556552107538, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_Text
+      value: Fly!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114390292790243690, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 96a8627ce823a704aab54b42a3217443,
+        type: 3}
+    - target: {fileID: 224409178707276656, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 185.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224409178707276656, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 32.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 224409178707276656, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000005722
+      objectReference: {fileID: 0}
+    - target: {fileID: 224409178707276656, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -46.45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad, type: 2}
   m_IsPrefabParent: 0

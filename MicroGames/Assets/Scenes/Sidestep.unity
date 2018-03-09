@@ -215,6 +215,42 @@ Prefab:
       propertyPath: m_Text
       value: Avoid!
       objectReference: {fileID: 0}
+    - target: {fileID: 114408556552107538, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_Text
+      value: Avoid!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114390292790243690, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c76f54bbdf054684f83e9fd671ee6cf0,
+        type: 3}
+    - target: {fileID: 114390292790243690, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224409178707276656, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 106
+      objectReference: {fileID: 0}
+    - target: {fileID: 224409178707276656, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 47.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224409178707276656, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224409178707276656, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -46
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19ed0dcb0f3f32847b9b89bb72fd8aad, type: 2}
   m_IsPrefabParent: 0

@@ -77,4 +77,9 @@ public class MetaGameManager : MonoBehaviour
         score = 0;
         lives = 3;
     }
+
+    public void Destroy()
+    {
+        Destroy(GetComponent<MetaGameManager>().gameObject);
+    }
 }

@@ -125,6 +125,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 6e4bb45aea8c2c7f958e146e092032a5 Assembly-CSharp.dll:.HeroFlySounds
 5a6b5a1f05d29ef75d82f71eb1eab9c6 Assembly-CSharp.dll:.MicroGameManager
+c91cab3efab6221935ec08387767bcb0 Assembly-CSharp.dll:.CursorHider
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
@@ -173,6 +174,7 @@ a486f90ef9b0e097f4b5f1a7487c3519 Assembly-CSharp.dll:.TimerChecker
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PongAI
+e887fb50f00ebb0020099be95da0dbdc Assembly-CSharp.dll:.VOAnnouncementScript
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 76a891860143848d0b61b1f0ba562075 Assembly-CSharp.dll:.TitleScreenManager
 6119555ad1137c534334d1c028adfd12 Assembly-CSharp.dll:.Timer
@@ -195,4 +197,3 @@ f84cc418a0eb0a5948ed2446242f271c Assembly-CSharp.dll:.SidestepMovement
 12a37f1c7c3d5e1c7037b7a1096c5ecb Assembly-CSharp.dll:.ObjectRandomMovement
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ApplicationQuiter
 05205f60d404bf1a54ab36b56969653e Assembly-CSharp.dll:.HeroFlyMovement
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CursorHider

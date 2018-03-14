@@ -282,6 +282,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BigInstructionTimeText.cs" />
+    <Compile Include="Assets\GameStarter.cs" />
     <Compile Include="Assets\Scripts\Generics\BackgroundMoveScript.cs" />
     <Compile Include="Assets\Scripts\Generics\CameraFollowScript.cs" />
     <Compile Include="Assets\Scripts\Generics\CursorHider.cs" />

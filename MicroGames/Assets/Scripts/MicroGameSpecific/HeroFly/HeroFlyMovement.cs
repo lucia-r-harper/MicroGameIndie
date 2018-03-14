@@ -34,8 +34,14 @@ public class HeroFlyMovement : MonoBehaviour
     {
         if (Input.GetButtonDown(FlyButton) && timer.MicroGameState == PlayingState.Playing)
         {
+            playerRigidbody2D.gravityScale = 0;
             playerRigidbody2D.AddForce(transform.up * FlyUpThrust);
+            //transform.Translate(0, FlyUpThrust * Time.deltaTime, 0);
             heroFlySounds.PlayWhoosh();
+        }
+        else
+        {
+            playerRigidbody2D.gravityScale = 1;
         }
     }
 }

@@ -6,9 +6,9 @@ public class Meteor : MonoBehaviour
 {
     private Transform target;
     private SpriteRenderer spriteRenderer;
-    private float speed = 0.75f;
+    private float speed = 0.4f;
     private bool isDestroyed = false;
-    private const float difficultyScaleRate = 20;
+    private const float difficultyScaleRate = 50;
 
     private const float explosionFadeOutTime = 0.2f;
     private float explosionAlphaValue = 255;

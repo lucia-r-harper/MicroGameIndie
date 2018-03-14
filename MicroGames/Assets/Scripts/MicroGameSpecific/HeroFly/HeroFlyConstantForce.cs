@@ -5,7 +5,7 @@ using UnityEngine;
 public class HeroFlyConstantForce : MonoBehaviour
 {
     private ConstantForce2D constantForce2D;
-    private const float difficultyScale = 20;
+    private const float difficultyScale = 50;
 	// Use this for initialization
 	void Start ()
     {

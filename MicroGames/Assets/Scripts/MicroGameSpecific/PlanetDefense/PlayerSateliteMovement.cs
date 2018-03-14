@@ -59,7 +59,8 @@ public class PlayerSateliteMovement : MonoBehaviour
 
     private void UpdateMovementValues()
     {
-        //negative one multiplier added so it rotates clockwise around the planet
+        //movementInputValue = 0;
+
         movementInputValue = (Input.GetAxis(MovementInput)) * -1;
     }
 }

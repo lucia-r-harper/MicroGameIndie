@@ -5,7 +5,7 @@ using UnityEngine;
 public class MashSpaceToMove : PlayerMove
 {
     private Timer timer;
-    private float difficultySpeedAdjustmentRate = 20;
+    private float difficultySpeedAdjustmentRate = 50;
     private AudioSource audioSource;
 
     // Use this for initialization

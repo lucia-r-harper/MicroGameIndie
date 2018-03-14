@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class PauseManager : MonoBehaviour
 {
-    public bool IsPaused = false;
+    public static bool IsPaused = false;
     public GameObject popUp;
     public GameObject ContinueButton;
 	// Use this for initialization

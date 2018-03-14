@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class MovingTarget : MonoBehaviour
 {
-    private float speed = 0.25f;
+    private float speed = 0.15f;
     private float rotationspeed = 25f;
-    private float difficultySpeedAdjustmentRate = 20;
+    private float difficultySpeedAdjustmentRate = 50;
 
     private Timer timer;
 

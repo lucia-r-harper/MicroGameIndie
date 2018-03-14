@@ -6,7 +6,7 @@ using UnityEngine;
 public class PongBallMovement : ObjectRandomMovement
 {
     private AudioSource audioSource;
-    private float difficultySpeedAdjustmentRate = 20;
+    private float difficultySpeedAdjustmentRate = 50;
     // Use this for initialization
     void Start ()
     {

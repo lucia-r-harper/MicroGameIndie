@@ -94,19 +94,26 @@ public class Timer : MonoBehaviour
 
     private void UpdateTimerText()
     {
-        switch (microgameState)
+        if (Time.timeScale == 0 && PauseManager.IsPaused == false)
         {
-            case PlayingState.Playing:
-                timerText.text = seconds.ToString();
-                break;
-            case PlayingState.Lost:
-                timerText.text = "You lose! Get ready!";
-                break;
-            case PlayingState.Won:
-                timerText.text = "Finished! Get ready!";
-                break;
-            default:
-                break;
+            timerText.text = "Press Space to Play";
+        }
+        else
+        {
+            switch (microgameState)
+            {
+                case PlayingState.Playing:
+                    timerText.text = seconds.ToString();
+                    break;
+                case PlayingState.Lost:
+                    timerText.text = "You lose! Get ready!";
+                    break;
+                case PlayingState.Won:
+                    timerText.text = "Finished! Get ready!";
+                    break;
+                default:
+                    break;
+            }
         }
     }
 

@@ -8,7 +8,7 @@ public class PlayerShoot : MonoBehaviour
     public string shootingButton = "Jump";
     public GameObject shotFired;
     public int shotLimit = 1;
-	
+    private bool canShoot = false;
 	// Update is called once per frame
 	void Update ()
     {
@@ -19,7 +19,14 @@ public class PlayerShoot : MonoBehaviour
     {
         if (Input.GetButtonDown(shootingButton))
         {
-            Shoot();
+            if (canShoot)
+            {
+                Shoot();
+            }
+            else
+            {
+                canShoot = true;
+            }
         }
     }
 

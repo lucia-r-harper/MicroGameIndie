@@ -9,7 +9,7 @@ public class Abductee : ObjectRandomMovement
 
     private WaitForSeconds timeUntilChangesMovement;
 
-    private float difficultySpeedAdjustmentScaling = 10;
+    private float difficultySpeedAdjustmentScaling = 25;
 
     private bool isAbducted;
 
@@ -22,6 +22,8 @@ public class Abductee : ObjectRandomMovement
     {
         isAbducted = false;
         audioSource = GetComponent<AudioSource>();
+        minSpeed = 0.05f;
+        maxSpeed = 0.1f;
         AdjustSpeedForDifficulty();
         timeUntilChangesMovement = new WaitForSeconds(TimeUntilChangesMovement);
         StartCoroutine(SetNewMovementBasedOnIntervalOfTime());
@@ -29,8 +31,8 @@ public class Abductee : ObjectRandomMovement
 
     private void AdjustSpeedForDifficulty()
     {
-        minSpeed += MetaGameManager.Difficulty/10;
-        maxSpeed += MetaGameManager.Difficulty/10;
+        minSpeed += (MetaGameManager.Difficulty/ difficultySpeedAdjustmentScaling);
+        maxSpeed += (MetaGameManager.Difficulty/ difficultySpeedAdjustmentScaling);
     }
 
     private IEnumerator SetNewMovementBasedOnIntervalOfTime()

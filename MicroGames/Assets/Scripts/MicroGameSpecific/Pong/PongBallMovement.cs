@@ -7,9 +7,13 @@ public class PongBallMovement : ObjectRandomMovement
 {
     private AudioSource audioSource;
     private float difficultySpeedAdjustmentRate = 50;
+
+    private Timer timer;
+
     // Use this for initialization
     void Start ()
     {
+        timer = FindObjectOfType<Timer>();
         speed = 0.5f;
         SetRandomMovement();
         SetSpeedBasedOnDifficulty();
@@ -31,7 +35,22 @@ public class PongBallMovement : ObjectRandomMovement
 
     private void FixedUpdate()
     {
-        MoveFixedUpdate();
+        switch (timer.MicroGameState)
+        {
+            case PlayingState.Playing:
+                MoveFixedUpdate();
+                break;
+            case PlayingState.Lost:
+                break;
+            case PlayingState.Won:
+                break;
+            case PlayingState.Starting:
+                break;
+            case PlayingState.Ending:
+                break;
+            default:
+                break;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

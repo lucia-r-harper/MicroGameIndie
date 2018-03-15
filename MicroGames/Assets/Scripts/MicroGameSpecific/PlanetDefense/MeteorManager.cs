@@ -33,11 +33,51 @@ public class MeteorManager : MonoBehaviour
 
     private IEnumerator SpawnMeteors()
     {
-        while (timer.MicroGameState == PlayingState.Playing)
+        while (Application.isPlaying)
         {
-            SpawnMeteor();
+            switch (timer.MicroGameState)
+            {
+                case PlayingState.Playing:
+                    SpawnMeteor();
+                    break;
+                case PlayingState.Lost:
+                    break;
+                case PlayingState.Won:
+                    break;
+                case PlayingState.Starting:
+                    break;
+                case PlayingState.Ending:
+                    break;
+                default:
+                    break;
+            }
             yield return meteorSpawnDelay;
         }
+    }
+
+    private void Update()
+    {
+        switch (timer.MicroGameState)
+        {
+            case PlayingState.Playing:
+                break;
+            case PlayingState.Lost:
+                BlowUpAllMeteors();
+                break;
+            case PlayingState.Won:
+                BlowUpAllMeteors();
+                break;
+            case PlayingState.Starting:
+                break;
+            case PlayingState.Ending:
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void BlowUpAllMeteors()
+    {
         foreach (Meteor meteor in meteors)
         {
             meteor.BlowUp();

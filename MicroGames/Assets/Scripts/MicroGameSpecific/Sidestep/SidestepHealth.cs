@@ -26,7 +26,22 @@ public class SidestepHealth : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Die();
+        switch (timer.MicroGameState)
+        {
+            case PlayingState.Playing:
+                Die();
+                break;
+            case PlayingState.Lost:
+                break;
+            case PlayingState.Won:
+                break;
+            case PlayingState.Starting:
+                break;
+            case PlayingState.Ending:
+                break;
+            default:
+                break;
+        }
     }
 
 

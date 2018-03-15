@@ -16,17 +16,38 @@ public class PlayerMove : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
 
+    Timer timer;
+
 	// Use this for initialization
 	void Start ()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        timer = FindObjectOfType<Timer>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        UpdateMoveValues();
-	}
+        switch (timer.MicroGameState)
+        {
+            case PlayingState.Playing:
+                UpdateMoveValues();
+                break;
+            case PlayingState.Lost:
+                zeroOutUpdateValues();
+                break;
+            case PlayingState.Won:
+                zeroOutUpdateValues();
+                break;
+            case PlayingState.Starting:
+                break;
+            case PlayingState.Ending:
+                zeroOutUpdateValues();
+                break;
+            default:
+                break;
+        }
+    }
 
     private void FixedUpdate()
     {
@@ -56,6 +77,12 @@ public class PlayerMove : MonoBehaviour
 
         Debug.Log("Vertical Input:" + verticalInputValue);
         Debug.Log("Horizontal Input:" + horizontalInputValue);
+    }
+
+    protected virtual void zeroOutUpdateValues()
+    {
+        verticalInputValue = 0;
+        horizontalInputValue = 0;
     }
 
     private void UpdateMove()

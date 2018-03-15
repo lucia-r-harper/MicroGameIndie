@@ -8,25 +8,45 @@ public class PlayerShoot : MonoBehaviour
     public string shootingButton = "Jump";
     public GameObject shotFired;
     public int shotLimit = 1;
-    private bool canShoot = false;
-	// Update is called once per frame
-	void Update ()
+
+    private Timer timer;
+    //private bool canShoot = false;
+    // Update is called once per frame
+
+    private void Start()
+    {
+        timer = FindObjectOfType<Timer>();
+    }
+    void Update ()
     {
         CheckForFireButton();
 	}
 
     private void CheckForFireButton()
     {
+        switch (timer.MicroGameState)
+        {
+            case PlayingState.Playing:
+                UpdateToShoot();
+                break;
+            case PlayingState.Lost:
+                break;
+            case PlayingState.Won:
+                break;
+            case PlayingState.Starting:
+                break;
+            case PlayingState.Ending:
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void UpdateToShoot()
+    {
         if (Input.GetButtonDown(shootingButton))
         {
-            if (canShoot)
-            {
-                Shoot();
-            }
-            else
-            {
-                canShoot = true;
-            }
+            Shoot();
         }
     }
 

@@ -7,19 +7,56 @@ public class RandomBulletSpawner : MonoBehaviour
 {
     public int NumberOfBulletsToSpawn;
     public GameObject bullet;
+    private bool haveBulletsBeenSpawned = false;
 
     public float XBorderExtent = 8.875f;
     public float YBorderExtent = 5.0f;
 
+    private Timer timer;
+
 	// Use this for initialization
 	void Start ()
     {
+        timer = FindObjectOfType<Timer>();
         AdjustNumberOfBulletsToSpawnForDifficulty();
+        //SpawnAllBullets();
+    }
+
+    private void Update()
+    {
+        switch (timer.MicroGameState)
+        {
+            case PlayingState.Playing:
+                SpawnAllBullets();
+                break;
+            case PlayingState.Lost:
+                break;
+            case PlayingState.Won:
+                break;
+            case PlayingState.Starting:
+                break;
+            case PlayingState.Ending:
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void SpawnAllBullets()
+    {
         for (int i = 0; i < NumberOfBulletsToSpawn; i++)
         {
-            SpawnBullet();
+            if (haveBulletsBeenSpawned == false)
+            {
+                SpawnBullet();
+            }
+
+            if (i+1 == NumberOfBulletsToSpawn)
+            {
+                haveBulletsBeenSpawned = true;
+            }
         }
-	}
+    }
 
     private void AdjustNumberOfBulletsToSpawnForDifficulty()
     {

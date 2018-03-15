@@ -12,6 +12,8 @@ public class ObjectRandomMovement : MonoBehaviour
     protected float verticalMovementValue;
     protected float speed;
 
+    private Timer timer;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -50,5 +52,10 @@ public class ObjectRandomMovement : MonoBehaviour
                 horizontalMovementValue *= -1;
             }
         }
+    }
+
+    public void GetTimer(Timer timerToGet)
+    {
+        timer = timerToGet;
     }
 }

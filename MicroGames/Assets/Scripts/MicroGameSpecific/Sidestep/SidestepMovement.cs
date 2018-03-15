@@ -13,19 +13,59 @@ public class SidestepMovement : MonoBehaviour
     private const float horizontalLimit = 7.5f;
     private bool isDead = false;
 
-	// Update is called once per frame
-	void Update ()
+    private Timer timer;
+
+    private void Start()
     {
-        if (isDead != true)
+        timer = FindObjectOfType<Timer>();
+    }
+
+    // Update is called once per frame
+    void Update ()
+    {
+        //if (isDead != true)
+        //{
+        //    CheckForSidestepMovement();
+        //}
+
+        switch (timer.MicroGameState)
         {
-            CheckForSidestepMovement();
+            case PlayingState.Playing:
+                CheckForSidestepMovement();
+                break;
+            case PlayingState.Lost:
+                break;
+            case PlayingState.Won:
+                break;
+            case PlayingState.Starting:
+                break;
+            case PlayingState.Ending:
+                break;
+            default:
+                break;
         }
-	}
+    }
 
 
     private void FixedUpdate()
     {
-        MoveForward();
+        switch (timer.MicroGameState)
+        {
+            case PlayingState.Playing:
+                MoveForward();
+                break;
+            case PlayingState.Lost:
+                break;
+            case PlayingState.Won:
+                MoveForward();
+                break;
+            case PlayingState.Starting:
+                break;
+            case PlayingState.Ending:
+                break;
+            default:
+                break;
+        }
     }
     private void CheckForSidestepMovement()
     {

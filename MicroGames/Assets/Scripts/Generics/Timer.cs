@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum PlayingState { Playing, Lost, Won}
+public enum PlayingState { Playing, Lost, Won, Starting, Ending}
 //TO BE ATTACHED TO TIMER TEXT COMPONENT
 public class Timer : MonoBehaviour
 {
     public Sprite[] timerImages;
-    public int timeLimit;
+    public const int timeLimit = 5;
+    private float timePassed = 0;
     public string newSceneToLoad = "testScene";
 
     private int seconds;
@@ -41,12 +42,17 @@ public class Timer : MonoBehaviour
             switch (microgameState)
             {
                 case PlayingState.Playing:
+                    StartCoroutine(CountDown());
                     break;
                 case PlayingState.Lost:
                     MetaGameManager.LoseLife();
                     break;
                 case PlayingState.Won:
                     MetaGameManager.WinGame();
+                    break;
+                case PlayingState.Starting:
+                    break;
+                case PlayingState.Ending:
                     break;
                 default:
                     break;
@@ -63,8 +69,10 @@ public class Timer : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+        MicroGameState = PlayingState.Starting;
+        //DontDestroyOnLoad(this);
         seconds = timeLimit;
-        StartCoroutine(CountDown());
+        //StartCoroutine(CountDown());
 	}
 
     private IEnumerator CountDown()
@@ -76,6 +84,12 @@ public class Timer : MonoBehaviour
             seconds--;
         }
     }
+
+    //private void CountDownSeconds()
+    //{
+    //    timePassed += Time.deltaTime;
+    //    seconds -= (int)timePassed;
+    //}
 
     // Update is called once per frame
     void Update ()

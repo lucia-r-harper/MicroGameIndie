@@ -23,8 +23,29 @@ public class PressSpaceToAbduct : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        switch (timer.MicroGameState)
+        {
+            case PlayingState.Playing:
+                UpdateAbductionZone();
+                break;
+            case PlayingState.Lost:
+                break;
+            case PlayingState.Won:
+                ActivateAbductionMode();
+                break;
+            case PlayingState.Starting:
+                break;
+            case PlayingState.Ending:
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void UpdateAbductionZone()
+    {
         //if the button is pressed, or if the game is already won (meaning the cow has been successfuly abducted
-        if (Input.GetButton(ActivateAbductModeButton) || timer.MicroGameState == PlayingState.Won)
+        if (Input.GetButton(ActivateAbductModeButton))
         {
             ActivateAbductionMode();
         }
@@ -32,7 +53,8 @@ public class PressSpaceToAbduct : MonoBehaviour
         {
             DeactivateAbductionMode();
         }
-	}
+    }
+
     private void ActivateAbductionMode()
     {
         abductionZone.Activate();

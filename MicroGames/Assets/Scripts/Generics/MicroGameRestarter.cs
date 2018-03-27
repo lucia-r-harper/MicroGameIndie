@@ -41,9 +41,12 @@ public class MicroGameRestarter : MonoBehaviour
             case PlayingState.Playing:
                 break;
             case PlayingState.Lost:
-                StartCoroutine(ChangeMicroGame());
+                //StartCoroutine(ChangeMicroGame());
                 break;
             case PlayingState.Won:
+                //StartCoroutine(ChangeMicroGame());
+                break;
+            case PlayingState.Ending:
                 StartCoroutine(ChangeMicroGame());
                 break;
             default:

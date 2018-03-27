@@ -306,6 +306,7 @@
     <Compile Include="Assets\BigInstructionTimeText.cs" />
     <Compile Include="Assets\GameStarter.cs" />
     <Compile Include="Assets\InstructionScript.cs" />
+    <Compile Include="Assets\Scripts\EndingTransitionManager.cs" />
     <Compile Include="Assets\Scripts\Generics\BackgroundMoveScript.cs" />
     <Compile Include="Assets\Scripts\Generics\CameraFollowScript.cs" />
     <Compile Include="Assets\Scripts\Generics\CursorHider.cs" />

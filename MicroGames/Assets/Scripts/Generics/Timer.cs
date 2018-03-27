@@ -114,16 +114,22 @@ public class Timer : MonoBehaviour
         }
         else
         {
+
             switch (microgameState)
             {
                 case PlayingState.Playing:
                     timerText.text = seconds.ToString();
                     break;
                 case PlayingState.Lost:
-                    timerText.text = "You lose! Get ready!";
+                    timerText.text = "You lose!";
                     break;
                 case PlayingState.Won:
-                    timerText.text = "Finished! Get ready!";
+                    timerText.text = "Finished!";
+                    break;
+                case PlayingState.Starting:
+                    break;
+                case PlayingState.Ending:
+                    timerText.text = "Get ready!";
                     break;
                 default:
                     break;

@@ -9,6 +9,8 @@ public class BulletDodgeMovementAnimations : MonoBehaviour
     private Timer timer;
     private Rigidbody2D rigidBody;
 
+    private bool isDead = false;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -21,10 +23,10 @@ public class BulletDodgeMovementAnimations : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        UpdateAnimations();
+        UpdateMovementAnimations();
     }
 
-    private void UpdateAnimations()
+    private void UpdateMovementAnimations()
     {
         if (timer.MicroGameState != PlayingState.Lost)
         {
@@ -36,11 +38,6 @@ public class BulletDodgeMovementAnimations : MonoBehaviour
             {
                 animator.SetBool("isplayerrunning", false);
             }
-        }
-        else
-        {
-            animator.SetBool("isplayerdead", true);
-            rigidBody.gravityScale = 1;
         }
     }
 }

@@ -838,6 +838,65 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!1001 &608380012
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4208380216632058, guid: 47754a8a0c614264ca6e43a8cd7ef9ce, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208380216632058, guid: 47754a8a0c614264ca6e43a8cd7ef9ce, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208380216632058, guid: 47754a8a0c614264ca6e43a8cd7ef9ce, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208380216632058, guid: 47754a8a0c614264ca6e43a8cd7ef9ce, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208380216632058, guid: 47754a8a0c614264ca6e43a8cd7ef9ce, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208380216632058, guid: 47754a8a0c614264ca6e43a8cd7ef9ce, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208380216632058, guid: 47754a8a0c614264ca6e43a8cd7ef9ce, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208380216632058, guid: 47754a8a0c614264ca6e43a8cd7ef9ce, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114766135030028318, guid: 47754a8a0c614264ca6e43a8cd7ef9ce,
+        type: 2}
+      propertyPath: background
+      value: 
+      objectReference: {fileID: 1890816504}
+    - target: {fileID: 114766135030028318, guid: 47754a8a0c614264ca6e43a8cd7ef9ce,
+        type: 2}
+      propertyPath: winningBackground
+      value: 
+      objectReference: {fileID: 21300000, guid: fb650c6a2b45590408c786befd3a3cad,
+        type: 3}
+    - target: {fileID: 114766135030028318, guid: 47754a8a0c614264ca6e43a8cd7ef9ce,
+        type: 2}
+      propertyPath: losingBackground
+      value: 
+      objectReference: {fileID: 21300000, guid: fb650c6a2b45590408c786befd3a3cad,
+        type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 47754a8a0c614264ca6e43a8cd7ef9ce, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &609653509
 GameObject:
   m_ObjectHideFlags: 0

@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 86
+  controlID: 11
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 58
+  controlID: 12
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 59
+  controlID: 13
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,8 +176,8 @@ MonoBehaviour:
     y: 0
     width: 258
     height: 504
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -257,8 +257,8 @@ MonoBehaviour:
     y: 0
     width: 281
     height: 891
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -371,23 +371,23 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    m_SelectedIDs: 022a0000
     m_LastClickedID: 0
-    m_ExpandedIDs: 92d5ffff4ae4ffff82e4ffffbef1ffff98fbffff00000000d2320000e6370000dc390000383a0000
+    m_ExpandedIDs: 1afffdff7e21feff683cfeffc45afeff4670feff8a93feff0ca8feffeacefeff16e1feffa406fffff625ffff1836ffffea3effff5249ffffe281ffff98fbfffff4ffffff00000000eaae0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: EndingTransitionManager
+      m_OriginalName: EndingTransitionManager
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -123318
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
@@ -568,19 +568,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Art
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Art
+  - Assets/Scenes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\christopher.harper\Desktop\GitHub\MicroGameIndie\MicroGames
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 5a280000
-    m_LastClickedID: 10330
-    m_ExpandedIDs: 00000000d02700000a280000402800004e2800005a280000682800007028000098280000c8280000ce280000fa2800005e2900007c290000742a00007e2a0000a02a0000862b0000aa2b0000cc2b0000162c0000ca2d000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 420}
+    m_SelectedIDs: 002a0000
+    m_LastClickedID: 10752
+    m_ExpandedIDs: 00000000d22700000c28000042280000502800005c2800006a280000722800009a280000ca280000d0280000fc280000602900007e290000762a0000802a0000a22a0000882b0000ac2b0000ce2b0000182c0000ae30000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -608,7 +608,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d02700000a280000402800004e2800005a280000682800007028000098280000c8280000ce280000fa2800005e2900007c290000742a00007e2a0000a02a0000862b0000aa2b0000cc2b0000162c0000ca2d0000
+    m_ExpandedIDs: 00000000d22700000c28000042280000502800005c2800006a280000722800009a280000ca280000d0280000fc280000602900007e290000762a0000802a0000a22a0000882b0000ac2b0000ce2b0000182c0000ae300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -636,21 +636,21 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: d2210000a022000000000000dc21000036220000f02100006a220000e62100002022000038520000c82b00002c4f0000284f0000ea2a00006c2b000062a000009a28000084280000462e000028290000dc290000
+    m_ExpandedInstanceIDs: d2210000a022000000000000dc21000036220000f02100006a220000e62100002022000038520000c82b00002c4f0000284f0000ea2a00006c2b000062a000009a28000084280000462e000028290000dc2900009e2a0000642a000056290000c8290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Transitions
+      m_OriginalName: Transitions
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 10442
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:

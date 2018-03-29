@@ -50,13 +50,13 @@ public class Timer : MonoBehaviour
                     MetaGameManager.LoseLife();
                     metaGameManager.ChangeColorOfText(Color.red, metaGameManager.LivesText);
                     //find better way to do this
-                    microgameState = PlayingState.Ending;
+                    //microgameState = PlayingState.Ending;
                     break;
                 case PlayingState.Won:
                     MetaGameManager.WinGame();
                     metaGameManager.ChangeColorOfText(Color.green, metaGameManager.ScoreText);
                     //find better way to do this
-                    microgameState = PlayingState.Ending;
+                    //microgameState = PlayingState.Ending;
                     break;
                 case PlayingState.Starting:
                     metaGameManager.ChangeColorOfText(Color.white, metaGameManager.ScoreText);

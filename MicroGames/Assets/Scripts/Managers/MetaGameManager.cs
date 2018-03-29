@@ -38,6 +38,11 @@ public class MetaGameManager : MonoBehaviour
         }
     }
 
+    public void ChangeColorOfText(Color newColor, Text textToChange)
+    {
+        textToChange.color = newColor;
+    }
+
     // Use this for initialization
     void Start ()
     {

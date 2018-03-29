@@ -13,6 +13,8 @@ public class Timer : MonoBehaviour
     private float timePassed = 0;
     public string newSceneToLoad = "testScene";
 
+    private MetaGameManager metaGameManager;
+
     private int seconds;
     public int Seconds
     {
@@ -46,11 +48,19 @@ public class Timer : MonoBehaviour
                     break;
                 case PlayingState.Lost:
                     MetaGameManager.LoseLife();
+                    metaGameManager.ChangeColorOfText(Color.red, metaGameManager.LivesText);
+                    //find better way to do this
+                    microgameState = PlayingState.Ending;
                     break;
                 case PlayingState.Won:
                     MetaGameManager.WinGame();
+                    metaGameManager.ChangeColorOfText(Color.green, metaGameManager.ScoreText);
+                    //find better way to do this
+                    microgameState = PlayingState.Ending;
                     break;
                 case PlayingState.Starting:
+                    metaGameManager.ChangeColorOfText(Color.white, metaGameManager.ScoreText);
+                    metaGameManager.ChangeColorOfText(Color.white, metaGameManager.LivesText);
                     break;
                 case PlayingState.Ending:
                     break;
@@ -64,6 +74,7 @@ public class Timer : MonoBehaviour
     {
         timerText = GetComponentInChildren<Text>();
         timerImage = GetComponentInChildren<Image>();
+        metaGameManager = FindObjectOfType<MetaGameManager>();
     }
 
     // Use this for initialization

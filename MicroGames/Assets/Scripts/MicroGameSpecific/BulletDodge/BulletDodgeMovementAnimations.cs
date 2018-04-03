@@ -39,5 +39,10 @@ public class BulletDodgeMovementAnimations : MonoBehaviour
                 animator.SetBool("isplayerrunning", false);
             }
         }
+
+        if (timer.MicroGameState == PlayingState.Won)
+        {
+            animator.SetBool("didplayerwin",true);
+        }
     }
 }

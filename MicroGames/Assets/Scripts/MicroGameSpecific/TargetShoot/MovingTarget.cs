@@ -12,6 +12,7 @@ public class MovingTarget : MonoBehaviour
 
     private Timer timer;
 
+    private bool hasWon = false;
 
 	// Use this for initialization
 	void Start ()
@@ -36,10 +37,15 @@ public class MovingTarget : MonoBehaviour
                 MoveLeftToRight();
                 break;
             case PlayingState.Won:
-                SpinOut();
+                //hasWon = true;
                 break;
             default:
                 break;
+        }
+
+        if (hasWon == true)
+        {
+            SpinOut();
         }
     }
 
@@ -48,6 +54,14 @@ public class MovingTarget : MonoBehaviour
         if (collision.gameObject.tag == "border" && timer.MicroGameState != PlayingState.Won)
         {
             speed *= -1;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "bullet")
+        {
+            hasWon = true;
         }
     }
 

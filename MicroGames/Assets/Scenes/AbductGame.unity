@@ -169,6 +169,8 @@ GameObject:
   m_Component:
   - component: {fileID: 96463314}
   - component: {fileID: 96463313}
+  - component: {fileID: 96463315}
+  - component: {fileID: 96463316}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -233,6 +235,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &96463315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 96463312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ee1428efcedb340ab91f40915e4a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &96463316
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 96463312}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1d9126164d5d34e44a4a94296b62792d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &136208791
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,6 +279,7 @@ GameObject:
   - component: {fileID: 136208794}
   - component: {fileID: 136208796}
   - component: {fileID: 136208798}
+  - component: {fileID: 136208801}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -495,6 +526,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &136208801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 136208791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ee1428efcedb340ab91f40915e4a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &168894835
 Prefab:
   m_ObjectHideFlags: 0
@@ -1191,6 +1233,7 @@ GameObject:
   - component: {fileID: 1195546946}
   - component: {fileID: 1195546945}
   - component: {fileID: 1195546947}
+  - component: {fileID: 1195546948}
   m_Layer: 0
   m_Name: Abductee
   m_TagString: abductee
@@ -1385,6 +1428,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &1195546948
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1195546941}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0075c9b58f1974747a4b08e32887727c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1338427620
 Prefab:
   m_ObjectHideFlags: 0

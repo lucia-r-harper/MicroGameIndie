@@ -6,17 +6,16 @@ using UnityEngine;
 public class EndingTransitionManager : MonoBehaviour
 {
     public static bool hasTransitionPlayed = false;
-    public SpriteRenderer background;
 
-    public Sprite winningBackground;
-    public Sprite losingBackground;
-
+    private TransitionAnimator[] transitionAnimators;
     Timer timer;
 	// Use this for initialization
 	void Start ()
     {
         timer = FindObjectOfType<Timer>();
-	}
+        transitionAnimators = GameObject.FindObjectsOfType<TransitionAnimator>();
+
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -57,13 +56,26 @@ public class EndingTransitionManager : MonoBehaviour
     //Override these functions depending on the microgame
     protected virtual void ActivateWinningAnimationTransition()
     {
-        background.sprite = winningBackground;
+        //background.sprite = winningBackground;
+        //GameObject.FindWithTag("Player").GetComponent<Animator>().SetBool("didplayerwin", true);
+
+        foreach (TransitionAnimator animatableObject in transitionAnimators)
+        {
+            animatableObject.SetToWinningAnimation();
+        }
+
         timer.MicroGameState = PlayingState.Ending;
     }
 
     protected virtual void ActivateLosingAnimationTransation()
     {
-        background.sprite = losingBackground;
+        //background.sprite = losingBackground;
+
+        foreach (TransitionAnimator animatableObject in transitionAnimators)
+        {
+            animatableObject.SetToLosingAnimation();
+        }
+
         timer.MicroGameState = PlayingState.Ending;
     }
 }

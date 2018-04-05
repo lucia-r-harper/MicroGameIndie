@@ -19,6 +19,13 @@ public class AbductionZone : MonoBehaviour
         Deactivate();
 	}
 
+    private void Update()
+    {
+        if (timer.MicroGameState != PlayingState.Playing)
+        {
+            Deactivate();
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

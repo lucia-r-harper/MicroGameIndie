@@ -13,9 +13,11 @@ public class TransitionAnimator : MonoBehaviour, IAnimatable
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
+
     public void SetToLosingAnimation()
     {
         animator.SetBool("didplayerlose", true);

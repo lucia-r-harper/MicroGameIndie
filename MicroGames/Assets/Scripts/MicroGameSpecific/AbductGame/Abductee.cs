@@ -17,11 +17,19 @@ public class Abductee : ObjectRandomMovement
 
     private const int abductionRotationSpeed = 20;
 
-	// Use this for initialization
-	void Start ()
+    private SpriteRenderer spriteRenderer;
+    private const float explosionFadeOutTime = 0.1f;
+    private float explosionAlphaValue = 255;
+
+    private Timer timer;
+
+    // Use this for initialization
+    void Start ()
     {
         isAbducted = false;
         audioSource = GetComponent<AudioSource>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        timer = FindObjectOfType<Timer>();
         minSpeed = 0.05f;
         maxSpeed = 0.1f;
         AdjustSpeedForDifficulty();
@@ -51,6 +59,12 @@ public class Abductee : ObjectRandomMovement
         {
             RotateWhileAbducted();
         }
+
+        //Fades out when the game is ending
+        if (timer.MicroGameState == PlayingState.Ending)
+        {
+            FadeOutAtEndGame();
+        }
 	}
 
 
@@ -71,5 +85,11 @@ public class Abductee : ObjectRandomMovement
     private void RotateWhileAbducted()
     {
         transform.Rotate(transform.forward, abductionRotationSpeed);
+    }
+
+    private void FadeOutAtEndGame()
+    {
+        float newAlpha = Mathf.SmoothDamp(spriteRenderer.color.a, 0, ref explosionAlphaValue, explosionFadeOutTime);
+        spriteRenderer.color = new Color(255, 255, 255, newAlpha);
     }
 }

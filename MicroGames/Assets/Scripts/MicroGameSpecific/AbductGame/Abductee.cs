@@ -21,8 +21,6 @@ public class Abductee : ObjectRandomMovement
     private const float explosionFadeOutTime = 0.1f;
     private float explosionAlphaValue = 255;
 
-    private Timer timer;
-
     // Use this for initialization
     void Start ()
     {

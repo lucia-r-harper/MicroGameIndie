@@ -12,7 +12,7 @@ public class ObjectRandomMovement : MonoBehaviour
     protected float verticalMovementValue;
     protected float speed;
 
-    private Timer timer;
+    protected Timer timer;
 
 	// Use this for initialization
 	void Start ()

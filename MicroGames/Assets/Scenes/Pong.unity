@@ -273,11 +273,13 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 234839294}
+  - component: {fileID: 234839300}
+  - component: {fileID: 234839295}
   - component: {fileID: 234839293}
   - component: {fileID: 234839296}
   - component: {fileID: 234839297}
-  - component: {fileID: 234839295}
   - component: {fileID: 234839298}
+  - component: {fileID: 234839299}
   m_Layer: 0
   m_Name: PongBall
   m_TagString: Untagged
@@ -471,6 +473,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &234839299
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 234839292}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fb592c0fe30c7584db2f951da248ec5f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &234839300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 234839292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ee1428efcedb340ab91f40915e4a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &248094492
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,7 +642,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 419175181}
+  - component: {fileID: 419175183}
   - component: {fileID: 419175182}
+  - component: {fileID: 419175184}
   m_Layer: 0
   m_Name: Emperor Penguin
   m_TagString: Untagged
@@ -677,6 +709,34 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &419175183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 419175180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ee1428efcedb340ab91f40915e4a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &419175184
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 419175180}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 988abbc5ea926d94e871f896ff9782ec, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &433137256
 Prefab:
   m_ObjectHideFlags: 0
@@ -1703,6 +1763,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1364318824}
   - component: {fileID: 1364318825}
+  - component: {fileID: 1364318826}
+  - component: {fileID: 1364318827}
   m_Layer: 0
   m_Name: Penguin
   m_TagString: Untagged
@@ -1767,6 +1829,34 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!95 &1364318826
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1364318823}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 90a6482a1f83dba469db9dd1752dfb11, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1364318827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1364318823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ee1428efcedb340ab91f40915e4a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1769229398
 GameObject:
   m_ObjectHideFlags: 0

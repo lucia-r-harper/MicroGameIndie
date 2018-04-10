@@ -311,6 +311,7 @@
     <Compile Include="Assets\Scripts\Generics\CameraFollowScript.cs" />
     <Compile Include="Assets\Scripts\Generics\CursorHider.cs" />
     <Compile Include="Assets\Scripts\Generics\MicroGameRestarter.cs" />
+    <Compile Include="Assets\Scripts\Generics\ObjectFollower.cs" />
     <Compile Include="Assets\Scripts\Generics\ObjectRandomMovement.cs" />
     <Compile Include="Assets\Scripts\Generics\ScreenBorder.cs" />
     <Compile Include="Assets\Scripts\Generics\Timer.cs" />

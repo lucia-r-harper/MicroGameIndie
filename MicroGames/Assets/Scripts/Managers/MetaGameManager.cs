@@ -8,6 +8,13 @@ using UnityEngine.SceneManagement;
 public class MetaGameManager : MonoBehaviour
 {
     private static int score = 0;
+    public static int Score
+    {
+        get
+        {
+            return score;
+        }
+    }
     private static int lives = 3;
 
     public Text ScoreText;

@@ -366,6 +366,7 @@
     <Compile Include="Assets\Scripts\IAnimatable.cs" />
     <Compile Include="Assets\Scripts\Managers\ApplicationQuiter.cs" />
     <Compile Include="Assets\Scripts\Managers\GameOverManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\HighScoreManager.cs" />
     <Compile Include="Assets\Scripts\Managers\MetaGameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\MicroGameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\MicroGameToggles.cs" />

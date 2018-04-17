@@ -54,7 +54,8 @@ public class MetaGameManager : MonoBehaviour
     void Start ()
     {
         DontDestroyOnLoad(this);
-	}
+        resetLivesAndScore();
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -80,7 +81,6 @@ public class MetaGameManager : MonoBehaviour
 
     public static void GameOver()
     {
-        resetLivesAndScore();
         SceneManager.LoadScene(GameOverScene);
     }
 

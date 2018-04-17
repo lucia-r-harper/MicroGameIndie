@@ -10,13 +10,19 @@ public class GameOverManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
+        
+    }
+
+    private static void DestroyMetaGameObjects()
+    {
         Destroy(GameObject.Find("MetaGame"));
         Destroy(GameObject.Find("MicroGameManager"));
         Destroy(GameObject.Find("ApplicationQuitter"));
-	}
+    }
 
     public void Restart()
     {
+        DestroyMetaGameObjects();
         SceneManager.LoadScene(TitleSceenScene);
     }
 

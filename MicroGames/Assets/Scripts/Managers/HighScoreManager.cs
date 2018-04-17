@@ -12,7 +12,8 @@ public class HighScoreManager : MonoBehaviour
     private int highScore = 0;
     private int sessionScore;
 
-    private string path = "/_saveData";
+    //Fix the path for this so it writes to the right location
+    private string path = "_saveData/";
 
     // Use this for initialization
     void Start ()
@@ -31,13 +32,12 @@ public class HighScoreManager : MonoBehaviour
     {
         if (sessionScore > highScore)
         {
+            highScore = sessionScore;
             Debug.Log("New high score!!!");
-            /*ERROR! TODO: InvalidOperationException: To be XML serializable, types which inherit from IEnumerable must have an implementation of Add(System.Object)
-            at all levels of their inheritance hierarchy. UnityEngine.Transform does not implement Add(System.Object).
-            */
-            XmlSerializer serializer = new XmlSerializer(typeof(HighScoreManager));
-            FileStream stream = new FileStream(path,FileMode.Create);
-            serializer.Serialize(stream, this);
+
+            XmlSerializer serializer = new XmlSerializer(typeof(int));
+            FileStream stream = new FileStream(path, FileMode.Create);
+            serializer.Serialize(stream, highScore);
             stream.Close();
         }
     }

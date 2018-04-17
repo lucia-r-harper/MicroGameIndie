@@ -13,11 +13,13 @@ public class HighScoreManager : MonoBehaviour
     private int sessionScore;
 
     //Fix the path for this so it writes to the right location
-    private string path = "_saveData/";
+    private string path;
 
     // Use this for initialization
     void Start ()
     {
+        //should work in build, might not work in editor
+        path = Application.dataPath + "/Resources/_saveData";
         GetCurrentSessionScore();
         GetHighScore();
         SetHighScore();

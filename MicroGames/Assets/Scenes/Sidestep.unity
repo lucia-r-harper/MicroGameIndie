@@ -1242,6 +1242,7 @@ GameObject:
   - component: {fileID: 756609203}
   - component: {fileID: 756609202}
   - component: {fileID: 756609206}
+  - component: {fileID: 756609207}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1326,6 +1327,18 @@ MonoBehaviour:
   CameraFollowMode: 1
   target: {fileID: 1933358597}
   followDistance: 4
+--- !u!114 &756609207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 756609201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: be4a0687437aea644bd05607e6d5a69e, type: 2}
 --- !u!1 &775155597
 GameObject:
   m_ObjectHideFlags: 0

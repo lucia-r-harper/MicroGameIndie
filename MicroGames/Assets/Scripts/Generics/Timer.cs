@@ -13,7 +13,11 @@ public class Timer : MonoBehaviour
     private float timePassed = 0;
     public string newSceneToLoad = "testScene";
 
-    private MetaGameManager metaGameManager;
+
+    #region Dependencies
+    private MetaGameManager metaGameManager; //
+    private VOAnnouncementScript VO; //
+    #endregion
 
     private int seconds;
     public int Seconds
@@ -45,15 +49,18 @@ public class Timer : MonoBehaviour
             {
                 case PlayingState.Playing:
                     StartCoroutine(CountDown());
+                    //VO.PlayeAnnouncement(0);
                     break;
                 case PlayingState.Lost:
                     MetaGameManager.LoseLife();
+                    VO.PlayeAnnouncement(1);
                     metaGameManager.ChangeColorOfText(Color.red, metaGameManager.LivesText);
                     //find better way to do this
                     //microgameState = PlayingState.Ending;
                     break;
                 case PlayingState.Won:
                     MetaGameManager.WinGame();
+                    VO.PlayeAnnouncement(2);
                     metaGameManager.ChangeColorOfText(Color.green, metaGameManager.ScoreText);
                     //find better way to do this
                     //microgameState = PlayingState.Ending;
@@ -75,6 +82,7 @@ public class Timer : MonoBehaviour
         timerText = GetComponentInChildren<Text>();
         timerImage = GetComponentInChildren<Image>();
         metaGameManager = FindObjectOfType<MetaGameManager>();
+        VO = FindObjectOfType<VOAnnouncementScript>();
     }
 
     // Use this for initialization

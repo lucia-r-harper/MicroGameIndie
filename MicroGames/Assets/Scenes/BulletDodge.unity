@@ -864,8 +864,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 669277360}
-  - component: {fileID: 669277362}
   - component: {fileID: 669277361}
+  - component: {fileID: 669277362}
   m_Layer: 0
   m_Name: Announcements
   m_TagString: Untagged
@@ -899,8 +899,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClips:
   - {fileID: 8300000, guid: 18a8ee8712b7e4f4ea4ec12709cf8530, type: 3}
-  - {fileID: 8300000, guid: 22cb8994f337fc945bab997f1a8ad00d, type: 3}
-  - {fileID: 8300000, guid: f5bb08a4547b0be418fe1a3d868f49e3, type: 3}
+  - {fileID: 8300000, guid: 732292778723e024a9c7d298922febc5, type: 3}
+  - {fileID: 8300000, guid: 2f3e31ecae946cc409653d2a11c1c1d3, type: 3}
 --- !u!82 &669277362
 AudioSource:
   m_ObjectHideFlags: 0
@@ -909,7 +909,7 @@ AudioSource:
   m_GameObject: {fileID: 669277359}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243945921427482008, guid: 49d18785da9c0e9468cc0882fb5d6856,
+  OutputAudioMixerGroup: {fileID: 243083072873058896, guid: 49d18785da9c0e9468cc0882fb5d6856,
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
@@ -1111,7 +1111,7 @@ AudioSource:
   m_GameObject: {fileID: 1038485496}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243338985155507572, guid: 49d18785da9c0e9468cc0882fb5d6856,
+  OutputAudioMixerGroup: {fileID: 243601537256535210, guid: 49d18785da9c0e9468cc0882fb5d6856,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 30120cffacb95304c93746df41c717be, type: 3}
   m_PlayOnAwake: 1

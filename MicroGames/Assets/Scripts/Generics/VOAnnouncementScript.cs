@@ -9,6 +9,34 @@ public class VOAnnouncementScript : MonoBehaviour
     private AudioSource audioSource;
 
     private Timer timer;
+    //private Timer timerAccessor
+    //{
+    //    get
+    //    {
+    //        return timer;
+    //    }
+    //    set
+    //    {
+    //        switch (timer.MicroGameState)
+    //        {
+    //            case PlayingState.Playing:
+    //                break;
+    //            case PlayingState.Lost:
+    //                playAnnouncement(audioClips[1]);
+    //                break;
+    //            case PlayingState.Won:
+    //                playAnnouncement(audioClips[2]);
+    //                break;
+    //            case PlayingState.Starting:
+    //                playAnnouncement(audioClips[0]);
+    //                break;
+    //            case PlayingState.Ending:
+    //                break;
+    //            default:
+    //                break;
+    //        }
+    //    }
+    //}
     private bool hasAnnouncementPlayed = false;
 
 	// Use this for initialization
@@ -16,7 +44,7 @@ public class VOAnnouncementScript : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         timer = FindObjectOfType<Timer>();
-        playAnnouncement(audioClips[0]);
+        //playAnnouncement(audioClips[0]);
         hasAnnouncementPlayed = false;
 
 	}
@@ -24,25 +52,26 @@ public class VOAnnouncementScript : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        switch (timer.MicroGameState)
-        {
-            case PlayingState.Playing:
-                break;
-            case PlayingState.Lost:
-                if (audioSource.isPlaying == false && hasAnnouncementPlayed == false)
-                {
-                    playAnnouncement(audioClips[1]);
-                }
-                break;
-            case PlayingState.Won:
-                if (audioSource.isPlaying == false && hasAnnouncementPlayed == false)
-                {
-                    playAnnouncement(audioClips[2]);
-                }
-                break;
-            default:
-                break;
-        }
+        //switch (timer.MicroGameState)
+        //{
+        //    case PlayingState.Playing:
+        //        break;
+        //    case PlayingState.Lost:
+        //        if (audioSource.isPlaying == false && hasAnnouncementPlayed == false)
+        //        {
+        //            playAnnouncement(audioClips[1]);
+        //        }
+        //        break;
+        //    case PlayingState.Won:
+        //        if (audioSource.isPlaying == false && hasAnnouncementPlayed == false)
+        //        {
+        //            playAnnouncement(audioClips[2]);
+        //        }
+        //        break;
+        //    default:
+        //        break;
+        //}
+        //timerAccessor = timer;
     }
 
     private void playAnnouncement(AudioClip announcementToPlay)
@@ -50,5 +79,10 @@ public class VOAnnouncementScript : MonoBehaviour
         audioSource.clip = announcementToPlay;
         audioSource.Play();
         hasAnnouncementPlayed = true;
+    }
+
+    public void PlayeAnnouncement(int announcementToPlayIndex)
+    {
+        playAnnouncement(audioClips[announcementToPlayIndex]);
     }
 }

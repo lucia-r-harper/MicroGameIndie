@@ -47,9 +47,9 @@ public class PauseManager : MonoBehaviour
     private void Pause()
     {
         IsPaused = true;
-        Debug.Log(IsPaused);
+        //Debug.Log(IsPaused);
         popUp.SetActive(true);
         Time.timeScale = 0;
-        FindObjectOfType<EventSystem>().SetSelectedGameObject(ContinueButton);
+        //FindObjectOfType<EventSystem>().SetSelectedGameObject(ContinueButton);
     }
 }

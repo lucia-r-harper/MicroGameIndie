@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SidestepHealth : MonoBehaviour
 {
+    public AudioSource crashSFX;
     private bool isDead;
     private Timer timer;
 
@@ -42,6 +43,7 @@ public class SidestepHealth : MonoBehaviour
             default:
                 break;
         }
+        crashSFX.Play();
     }
 
 

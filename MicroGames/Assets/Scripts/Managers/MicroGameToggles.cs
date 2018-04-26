@@ -10,10 +10,10 @@ public class MicroGameToggles : MonoBehaviour
 
     private void OnDisable()
     {
-        ResetToggle();
+        //ResetToggle();
     }
 
-    private void ResetToggle()
+    public void ResetToggle()
     {
         foreach (Toggle toggle in Toggles)
         {

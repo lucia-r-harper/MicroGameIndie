@@ -7,4 +7,17 @@ using UnityEngine.UI;
 public class MicroGameToggles : MonoBehaviour
 {
     public Toggle[] Toggles = new Toggle[8];
+
+    private void OnDisable()
+    {
+        ResetToggle();
+    }
+
+    private void ResetToggle()
+    {
+        foreach (Toggle toggle in Toggles)
+        {
+            toggle.isOn = true;
+        }
+    }
 }

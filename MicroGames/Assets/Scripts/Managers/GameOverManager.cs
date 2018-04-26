@@ -22,8 +22,8 @@ public class GameOverManager : MonoBehaviour
 
     public void Restart()
     {
-        DestroyMetaGameObjects();
         SceneManager.LoadScene(TitleSceenScene);
+        DestroyMetaGameObjects();
     }
 
     public void Quit()

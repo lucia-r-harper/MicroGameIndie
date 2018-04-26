@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 54
+  controlID: 77
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 55
+  controlID: 30
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,8 +176,8 @@ MonoBehaviour:
     y: 0
     width: 402
     height: 564
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -201,8 +201,8 @@ MonoBehaviour:
     y: 0
     width: 962
     height: 564
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -257,8 +257,8 @@ MonoBehaviour:
     y: 0
     width: 556
     height: 1067
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -371,28 +371,28 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1caeffff
-    m_LastClickedID: -20964
-    m_ExpandedIDs: 48b8ffff0abdffff56bfffff6ec1ffff62c3ffff9afbffff0000000020300000923100001c320000863a0000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: ca96ffff7ca3fffff6f4ffff9afbffff000000003a320000c434000016350000e45100001a520000405200009a5200002455000076550000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Restart
+      m_OriginalName: Restart
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 20942
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
   m_ExpandedScenes:
-  - Sidestep
+  - TitleScene
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -577,10 +577,10 @@ MonoBehaviour:
   m_LastProjectPath: C:\Users\christopher.harper\Desktop\GitHub\MicroGameIndie\MicroGames
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 581.8495}
-    m_SelectedIDs: 082c0000
-    m_LastClickedID: 11272
-    m_ExpandedIDs: 00000000a628000004290000642900007e2900008229000096290000ba290000fc290000262a0000542a00005c2a0000982a0000242b0000502b0000ac2b0000c22b0000a02c0000b42c0000dc2c00004c2d0000142e00004a2e0000882e0000da2e0000e62e00005634000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 343}
+    m_SelectedIDs: 0c2c0000
+    m_LastClickedID: 11276
+    m_ExpandedIDs: 00000000a8280000062900006629000082290000862900009a290000be290000002a00002a2a0000582a0000602a00009c2a0000282b0000542b0000b02b0000c62b0000a42c0000b82c0000e02c0000502d0000182e00004e2e00008c2e0000de2e0000ea2e0000cc31000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -608,7 +608,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a628000004290000642900007e2900008229000096290000ba290000fc290000262a0000542a00005c2a0000982a0000242b0000502b0000ac2b0000c22b0000a02c0000b42c0000dc2c00004c2d0000142e00004a2e0000882e0000da2e0000e62e000056340000
+    m_ExpandedIDs: 00000000a8280000062900006629000082290000862900009a290000be290000002a00002a2a0000582a0000602a00009c2a0000282b0000542b0000b02b0000c62b0000a42c0000b82c0000e02c0000502d0000182e00004e2e00008c2e0000de2e0000ea2e0000cc310000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -639,18 +639,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: d2210000a022000000000000dc21000036220000f02100006a220000e62100002022000038520000c82b00002c4f0000284f0000ea2a00006c2b000062a000009a28000084280000462e000028290000dc2900009e2a0000642a000056290000c8290000862b0000502d0000682a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: CustomModeScreenToggleResetter
-      m_OriginalName: CustomModeScreenToggleResetter
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 13438
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 4
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
@@ -662,7 +662,7 @@ MonoBehaviour:
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
-  m_DirectoriesAreaWidth: 278
+  m_DirectoriesAreaWidth: 273
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52

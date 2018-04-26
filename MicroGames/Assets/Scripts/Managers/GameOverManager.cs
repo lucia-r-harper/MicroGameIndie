@@ -10,7 +10,7 @@ public class GameOverManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        
+        MouseManager.MouseState = MouseState.GameOver;
     }
 
     private static void DestroyMetaGameObjects()

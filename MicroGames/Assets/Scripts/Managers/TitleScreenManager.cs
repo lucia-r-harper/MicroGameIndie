@@ -35,7 +35,7 @@ public class TitleScreenManager : MonoBehaviour
     {
         DeactivateAllPanels();
         panelToChangeTo.SetActive(true);
-        eventSystem.SetSelectedGameObject(panelToChangeTo.GetComponentInChildren<Button>().gameObject);
+        //eventSystem.SetSelectedGameObject(panelToChangeTo.GetComponentInChildren<Button>().gameObject);
     }
 
     private void DeactivateAllPanels()

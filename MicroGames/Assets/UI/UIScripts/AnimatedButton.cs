@@ -43,6 +43,12 @@ public class AnimatedButton : Button
         ChangeAnimationState(2);
     }
 
+    public override void OnPointerExit(PointerEventData eventData)
+    {
+        base.OnPointerExit(eventData);
+        ChangeAnimationState(0);
+    }
+
     public void ChangeAnimationState(int intToChangeTo)
     {
         animator.SetInteger("buttonstate", intToChangeTo);

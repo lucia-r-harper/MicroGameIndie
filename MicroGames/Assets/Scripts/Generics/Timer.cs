@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
 
     #region Dependencies
     private MetaGameManager metaGameManager; //
-    private VOAnnouncementScript VO; //
+    private VOAnnouncementScript[] GameNotifStings; //
     #endregion
 
     private int seconds;
@@ -53,14 +53,20 @@ public class Timer : MonoBehaviour
                     break;
                 case PlayingState.Lost:
                     MetaGameManager.LoseLife();
-                    VO.PlayeAnnouncement(1);
+                    foreach (VOAnnouncementScript stingPlayer in GameNotifStings)
+                    {
+                        stingPlayer.PlayeAnnouncement(1);
+                    }
                     metaGameManager.ChangeColorOfText(Color.red, metaGameManager.LivesText);
                     //find better way to do this
                     //microgameState = PlayingState.Ending;
                     break;
                 case PlayingState.Won:
                     MetaGameManager.WinGame();
-                    VO.PlayeAnnouncement(2);
+                    foreach (VOAnnouncementScript stingPlayer in GameNotifStings)
+                    {
+                        stingPlayer.PlayeAnnouncement(2);
+                    }
                     metaGameManager.ChangeColorOfText(Color.green, metaGameManager.ScoreText);
                     //find better way to do this
                     //microgameState = PlayingState.Ending;
@@ -82,7 +88,7 @@ public class Timer : MonoBehaviour
         timerText = GetComponentInChildren<Text>();
         timerImage = GetComponentInChildren<Image>();
         metaGameManager = FindObjectOfType<MetaGameManager>();
-        VO = FindObjectOfType<VOAnnouncementScript>();
+        GameNotifStings = FindObjectsOfType<VOAnnouncementScript>();
     }
 
     // Use this for initialization

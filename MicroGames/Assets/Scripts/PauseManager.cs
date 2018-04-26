@@ -35,7 +35,22 @@ public class PauseManager : MonoBehaviour
                 Pause();
             }
         }
+        HideCursor();
 	}
+
+    private void HideCursor()
+    {
+        if (popUp.activeInHierarchy == true)
+        {
+            //Cursor.visible = true;
+            MouseManager.MouseState = MouseState.Paused;
+        }
+        else
+        {
+            //Cursor.visible = false;
+            MouseManager.MouseState = MouseState.Upnaused;
+        }
+    }
 
     public void UnPause()
     {
@@ -51,5 +66,6 @@ public class PauseManager : MonoBehaviour
         popUp.SetActive(true);
         Time.timeScale = 0;
         //FindObjectOfType<EventSystem>().SetSelectedGameObject(ContinueButton);
+        Cursor.visible = true;
     }
 }

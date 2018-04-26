@@ -83,6 +83,9 @@ public class VOAnnouncementScript : MonoBehaviour
 
     public void PlayeAnnouncement(int announcementToPlayIndex)
     {
-        playAnnouncement(audioClips[announcementToPlayIndex]);
+        if (audioClips[announcementToPlayIndex] != null)
+        {
+            playAnnouncement(audioClips[announcementToPlayIndex]);
+        }
     }
 }

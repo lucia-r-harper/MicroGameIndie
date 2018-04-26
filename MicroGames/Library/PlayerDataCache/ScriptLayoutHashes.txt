@@ -35,7 +35,7 @@ dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics
 7dc49938d77a69d4ff0b4d7d46cc2ce5 Assembly-CSharp.dll:.MicroGameToggles
 d22c5af8b82f8c0b21a16f2f555936f4 Assembly-CSharp.dll:.PongGoal
 d632f00e5c41578cc8ee6151aa126a47 Assembly-CSharp.dll:.RandomBulletSpawner
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SidestepHealth
+01fc89b5f481f95bb58b5a5bb59a9c63 Assembly-CSharp.dll:.SidestepHealth
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ShotFired
 e6f640fa2a67691963209e34b17f8545 Assembly-CSharp.dll:.CameraFollowScript
 205965134a5874db410d674ebdf33ba7 Assembly-CSharp.dll:.ExampleWheelController
@@ -47,7 +47,7 @@ a17430587b480dd6f7b58643947b32c2 Assembly-CSharp.dll:.BackgroundMoveScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.BigInstructionTimeText
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TransitionAnimator
 f8433cf3034c92a713c51dc5996147bf Assembly-CSharp.dll:.MetaGameManager
-12a37f1c7c3d5e1c7037b7a1096c5ecb Assembly-CSharp.dll:.PongBallMovement
+1c9c3c99049c7992fcbd69bb08b9c3af Assembly-CSharp.dll:.PongBallMovement
 09404234f2188d8b53ae10f618adeffc Assembly-CSharp.dll:.ScreenBorder
 93eca74aa0bf55db1cc8eb1a35f14059 Assembly-CSharp.dll:.PlayerSateliteShooting
 a486f90ef9b0e097f4b5f1a7487c3519 Assembly-CSharp.dll:.TimerChecker
@@ -207,3 +207,5 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MouseManager
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CursorShower

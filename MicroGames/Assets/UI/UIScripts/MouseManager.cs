@@ -7,11 +7,13 @@ public enum MouseState { TitleScreen, GameOver, Upnaused, Paused}
 public class MouseManager : MonoBehaviour
 {
     public static MouseState MouseState;
+    public Texture2D customCursor;
     AudioSource clickSound;
 	// Use this for initialization
 	void Start ()
     {
         MouseState = MouseState.TitleScreen;
+        Cursor.SetCursor(customCursor, Vector2.zero, CursorMode.Auto);
         DontDestroyOnLoad(this);
         clickSound = GetComponent<AudioSource>();
 	}

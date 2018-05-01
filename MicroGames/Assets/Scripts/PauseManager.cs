@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PauseManager : MonoBehaviour
@@ -10,6 +11,8 @@ public class PauseManager : MonoBehaviour
     public static bool IsPaused = false;
     public GameObject popUp;
     public GameObject ContinueButton;
+
+    private bool isAtGameOverScene = false;
 	// Use this for initialization
 	void Start ()
     {
@@ -24,6 +27,14 @@ public class PauseManager : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
+        HandlePauseState();
+        DisablePauseOnGameOverScene();
+        HandleHideCursor();
+    }
+
+
+    private void HandlePauseState()
+    {
         if (Input.GetButtonDown("Cancel"))
         {
             if (IsPaused)
@@ -35,20 +46,33 @@ public class PauseManager : MonoBehaviour
                 Pause();
             }
         }
-        HandleHideCursor();
-	}
+        if (isAtGameOverScene == true)
+        {
+            UnPause();
+        }
+    }
+    private void DisablePauseOnGameOverScene()
+    {
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("GameOverScene"))
+        {
+            isAtGameOverScene = true;
+        }
+    }
 
     private void HandleHideCursor()
     {
-        if (popUp.activeInHierarchy == true)
+        if (isAtGameOverScene == false)
         {
-            //Cursor.visible = true;
-            MouseManager.MouseState = MouseState.Paused;
-        }
-        else
-        {
-            //Cursor.visible = false;
-            MouseManager.MouseState = MouseState.Upnaused;
+            if (popUp.activeInHierarchy == true)
+            {
+                //Cursor.visible = true;
+                MouseManager.MouseState = MouseState.Paused;
+            }
+            else
+            {
+                //Cursor.visible = false;
+                MouseManager.MouseState = MouseState.Upnaused;
+            }
         }
     }
 

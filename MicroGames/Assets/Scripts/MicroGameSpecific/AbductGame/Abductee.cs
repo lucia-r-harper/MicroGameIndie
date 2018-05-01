@@ -50,6 +50,12 @@ public class Abductee : ObjectRandomMovement
         }
     }
 
+    protected override void SetRandomMovementAndSpeed()
+    {
+        base.SetRandomMovementAndSpeed();
+        //Clamp me to smaller bounds
+    }
+
     // Update is called once per frame
     void Update ()
     {

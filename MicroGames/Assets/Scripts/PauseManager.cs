@@ -35,10 +35,10 @@ public class PauseManager : MonoBehaviour
                 Pause();
             }
         }
-        HideCursor();
+        HandleHideCursor();
 	}
 
-    private void HideCursor()
+    private void HandleHideCursor()
     {
         if (popUp.activeInHierarchy == true)
         {

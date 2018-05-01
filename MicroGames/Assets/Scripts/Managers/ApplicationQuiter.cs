@@ -19,8 +19,9 @@ public class ApplicationQuiter : MonoBehaviour
 
     public void ReturnToMain(string TitleSceenScene)
     {
-        SceneManager.LoadScene(TitleSceenScene);
-        DestroyMetaGameObjects();
+        //SceneManager.LoadScene(TitleSceenScene);
+        //DestroyMetaGameObjects();
+        MetaGameManager.GameOver();
     }
 
     //Only use if you can't fix bug

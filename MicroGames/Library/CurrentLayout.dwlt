@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 1067
-  m_MinSize: {x: 681, y: 492}
+  m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 122
+  controlID: 54
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,10 +130,10 @@ MonoBehaviour:
     y: 0
     width: 1364
     height: 1067
-  m_MinSize: {x: 404, y: 492}
+  m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 54
+  controlID: 55
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,10 +154,10 @@ MonoBehaviour:
     y: 0
     width: 1364
     height: 564
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 55
+  controlID: 56
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -371,28 +371,28 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b25d0000
-    m_LastClickedID: 23986
-    m_ExpandedIDs: 1e6bffffc6abffffaac2ffff9afbffff0000000024300000dc320000f2490000284a00004e4a0000124b0000844c00000e4d0000
+    m_SelectedIDs: 3e5d0000
+    m_LastClickedID: 23870
+    m_ExpandedIDs: 4062fffffc6cffff367affff78b1ffff26bbffffa8c9ffff96d3ffff12dfffffccf2ffff80fbfffff4ffffff00000000b82f0000f63100002c32000052320000a03d0000da3d0000003e00002e3e00008e3e00006e470000ce490000204a00005c4d0000924d0000b84d0000105d0000465d00006c5d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: GameOverObject
+      m_OriginalName: GameOverObject
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 23856
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
   m_ExpandedScenes:
-  - AbductGame
+  - GameOverScene
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -568,19 +568,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/MicroGameSpecific/AbductGame
+    - Assets/Scripts/Managers
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/MicroGameSpecific/AbductGame
+  - Assets/Scripts/Managers
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\christopher.harper\Desktop\GitHub\MicroGameIndie\MicroGames
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 643}
-    m_SelectedIDs: e82d0000
-    m_LastClickedID: 11752
-    m_ExpandedIDs: 00000000a62800000429000064290000802900008429000098290000bc290000fe290000282a0000562a00005e2a00009a2a0000262b0000522b0000ae2b0000c42b0000a22c0000b62c0000de2c00004e2d0000182e00004e2e00008c2e0000de2e0000ea2e00005a34000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 523}
+    m_SelectedIDs: 78290000
+    m_LastClickedID: 10616
+    m_ExpandedIDs: 00000000ca2800002829000088290000a4290000a8290000bc290000e0290000222a00004c2a00007a2a0000822a0000be2a00004a2b0000762b0000d22b0000e82b0000c62c0000da2c0000022d0000722d00003c2e0000722e0000b02e0000022f00000e2f0000c431000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -608,7 +608,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a62800000429000064290000802900008429000098290000bc290000fe290000282a0000562a00005e2a00009a2a0000262b0000522b0000ae2b0000c42b0000a22c0000b62c0000de2c00004e2d0000182e00004e2e00008c2e0000de2e0000ea2e00005a340000
+    m_ExpandedIDs: 00000000ca2800002829000088290000a4290000a8290000bc290000e0290000222a00004c2a00007a2a0000822a0000be2a00004a2b0000762b0000d22b0000e82b0000c62c0000da2c0000022d0000722d00003c2e0000722e0000b02e0000022f00000e2f0000c4310000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1304,7 +1304,7 @@ MonoBehaviour:
     width: 554
     height: 1046
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_ScrollPosition: {x: 0, y: 55.95508}
+  m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 160

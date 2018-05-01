@@ -9,9 +9,10 @@ public class MicroGameToggles : MonoBehaviour
     public Toggle[] Toggles = new Toggle[8];
     public Button startFromCustomModeButton;
 
+    private int togglesOn = 0;
+
     private void OnDisable()
     {
-        //ResetToggle();
     }
 
     public void ResetToggle()
@@ -24,21 +25,27 @@ public class MicroGameToggles : MonoBehaviour
 
     private void Update()
     {
-        DisableCustomModeStartButtonIfNoTogglesAreEnabled();
     }
 
-    private void DisableCustomModeStartButtonIfNoTogglesAreEnabled()
+    public void DisableCustomModeStartButtonIfNoTogglesAreEnabled()
     {
+        togglesOn = 0;
         foreach (Toggle toggle in Toggles)
         {
-            if (toggle.isOn == false)
+            if (toggle.isOn == true)
             {
-                startFromCustomModeButton.interactable = false;
+                togglesOn++;
+                Debug.Log("togglesOn: " + togglesOn.ToString());
             }
-            else
-            {
-                startFromCustomModeButton.interactable = true;
-            }
+        }
+
+        if (togglesOn == 0)
+        {
+            startFromCustomModeButton.interactable = false;
+        }
+        else
+        {
+            startFromCustomModeButton.interactable = true;
         }
     }
 }

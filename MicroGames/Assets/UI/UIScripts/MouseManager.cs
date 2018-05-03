@@ -7,22 +7,30 @@ public enum MouseState { TitleScreen, GameOver, Upnaused, Paused}
 public class MouseManager : MonoBehaviour
 {
     public static MouseState MouseState;
-    public Texture2D customCursor;
+    public Texture2D[] customCursors;
+    private Texture2D customCursor;
     AudioSource clickSound;
 	// Use this for initialization
 	void Start ()
     {
         MouseState = MouseState.TitleScreen;
-        Cursor.SetCursor(customCursor, Vector2.zero, CursorMode.Auto);
+        SetCustomCursor();
         DontDestroyOnLoad(this);
         clickSound = GetComponent<AudioSource>();
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    }
+
+
+    // Update is called once per frame
+    void Update ()
     {
         PlayClickWhenClicked();
         HideMouseBasedOnState();
+    }
+    private void SetCustomCursor()
+    {
+        int randomCursorNumber = UnityEngine.Random.Range(0, customCursors.Length);
+        customCursor = customCursors[randomCursorNumber];
+        Cursor.SetCursor(customCursor, Vector2.zero, CursorMode.Auto);
     }
 
     private void HideMouseBasedOnState()

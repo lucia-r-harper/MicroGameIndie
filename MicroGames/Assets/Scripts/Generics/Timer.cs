@@ -49,24 +49,18 @@ public class Timer : MonoBehaviour
             {
                 case PlayingState.Playing:
                     StartCoroutine(CountDown());
-                    //VO.PlayeAnnouncement(0);
+                    PlayStartUpStings();
                     break;
                 case PlayingState.Lost:
                     MetaGameManager.LoseLife();
-                    foreach (VOAnnouncementScript stingPlayer in GameNotifStings)
-                    {
-                        stingPlayer.PlayeAnnouncement(1);
-                    }
+                    PlayLosingStings();
                     metaGameManager.ChangeColorOfText(Color.red, metaGameManager.LivesText);
                     //find better way to do this
                     //microgameState = PlayingState.Ending;
                     break;
                 case PlayingState.Won:
                     MetaGameManager.WinGame();
-                    foreach (VOAnnouncementScript stingPlayer in GameNotifStings)
-                    {
-                        stingPlayer.PlayeAnnouncement(2);
-                    }
+                    PlayWinningStings();
                     metaGameManager.ChangeColorOfText(Color.green, metaGameManager.ScoreText);
                     //find better way to do this
                     //microgameState = PlayingState.Ending;
@@ -80,6 +74,30 @@ public class Timer : MonoBehaviour
                 default:
                     break;
             }
+        }
+    }
+
+    private void PlayWinningStings()
+    {
+        foreach (VOAnnouncementScript stingPlayer in GameNotifStings)
+        {
+            stingPlayer.PlayeAnnouncement(2);
+        }
+    }
+
+    private void PlayLosingStings()
+    {
+        foreach (VOAnnouncementScript stingPlayer in GameNotifStings)
+        {
+            stingPlayer.PlayeAnnouncement(1);
+        }
+    }
+
+    private void PlayStartUpStings()
+    {
+        foreach (VOAnnouncementScript stingPlayer in GameNotifStings)
+        {
+            stingPlayer.PlayeAnnouncement(0);
         }
     }
 

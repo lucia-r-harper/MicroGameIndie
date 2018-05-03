@@ -57,11 +57,11 @@ public class SidestepMovement : MonoBehaviour
             case PlayingState.Lost:
                 break;
             case PlayingState.Won:
-                MoveForward();
                 break;
             case PlayingState.Starting:
                 break;
             case PlayingState.Ending:
+                MoveForward();
                 break;
             default:
                 break;

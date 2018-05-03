@@ -4373,7 +4373,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c14a2fd49c1e67489cf94908404a465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customCursor: {fileID: 2800000, guid: 18b894bd4ffce534bbca406196e7e187, type: 3}
+  customCursors:
+  - {fileID: 2800000, guid: eedf25466d2a0004ea623cfd875b4b05, type: 3}
+  - {fileID: 2800000, guid: b254e94aab522bc49868e78fc5972b84, type: 3}
+  - {fileID: 2800000, guid: 18b894bd4ffce534bbca406196e7e187, type: 3}
+  - {fileID: 2800000, guid: c230ae8d6ad4c3e429d4b00b054925d5, type: 3}
+  - {fileID: 2800000, guid: edb37d3a0cd257b4cab7fecd2eed3b1c, type: 3}
+  - {fileID: 2800000, guid: 86a04c18680e10a41af4ab632feca955, type: 3}
+  - {fileID: 2800000, guid: a59b07998432a294d862059eac3dcb52, type: 3}
 --- !u!1 &1101469214
 GameObject:
   m_ObjectHideFlags: 0

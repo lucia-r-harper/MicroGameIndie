@@ -57,6 +57,10 @@ public class PauseManager : MonoBehaviour
         {
             isAtGameOverScene = true;
         }
+        else
+        {
+            isAtGameOverScene = false;
+        }
     }
 
     private void HandleHideCursor()
@@ -74,6 +78,11 @@ public class PauseManager : MonoBehaviour
                 MouseManager.MouseState = MouseState.Upnaused;
             }
         }
+    }
+
+    public void SetIsAtGameOverSceneToFalse()
+    {
+        isAtGameOverScene = false;
     }
 
     public void UnPause()

@@ -359,6 +359,7 @@
     <Compile Include="Assets\Scripts\Generics\MicroGameRestarter.cs" />
     <Compile Include="Assets\Scripts\Generics\ObjectFollower.cs" />
     <Compile Include="Assets\Scripts\Generics\ObjectRandomMovement.cs" />
+    <Compile Include="Assets\Scripts\Generics\ScoreRestarter.cs" />
     <Compile Include="Assets\Scripts\Generics\ScreenBorder.cs" />
     <Compile Include="Assets\Scripts\Generics\Timer.cs" />
     <Compile Include="Assets\Scripts\Generics\TimerChecker.cs" />

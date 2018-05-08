@@ -84,7 +84,7 @@ public class MetaGameManager : MonoBehaviour
         SceneManager.LoadScene(GameOverScene);
     }
 
-    private static void resetLivesAndScore()
+    public static void resetLivesAndScore()
     {
         score = 0;
         lives = 3;

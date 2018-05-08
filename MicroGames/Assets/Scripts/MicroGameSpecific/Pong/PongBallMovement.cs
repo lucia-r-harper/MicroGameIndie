@@ -6,7 +6,7 @@ using UnityEngine;
 public class PongBallMovement : ObjectRandomMovement
 {
     public AudioSource bouncesound;
-    private float difficultySpeedAdjustmentRate = 50;
+    private float difficultySpeedAdjustmentRate = 80;
 
     private Timer timer;
 
@@ -14,7 +14,7 @@ public class PongBallMovement : ObjectRandomMovement
     void Start ()
     {
         timer = FindObjectOfType<Timer>();
-        speed = 0.5f;
+        speed = 0.3f;
         SetRandomMovement();
         SetSpeedBasedOnDifficulty();
         //bouncesound = GetComponent<AudioSource>();

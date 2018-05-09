@@ -9,14 +9,6 @@ using UnityEngine.UI;
 
 public class HighScoreManager : MonoBehaviour
 {
-    public class HighScoreContainer
-    {
-        public int[] Top5ScoresInt = new int[5];
-        public string[] Top5Names = new string[5];
-
-        public int Test;
-        //public Dictionary<int, string> Top5Scores;
-    }
 
     //public Text HighScoreText;
     public Animator HighScoreNotificationAnimator;
@@ -26,7 +18,6 @@ public class HighScoreManager : MonoBehaviour
     private int sessionHighScore = 0;
     private int[] highScoreInts = new int[5];
     private string[] highScoreNames = new string[5];
-    private HighScoreContainer highScoreContainer;
     private int sessionScore;
     int newHighScoreLocation = 0;
 
@@ -95,13 +86,6 @@ public class HighScoreManager : MonoBehaviour
 
     private void GetHighScore()
     {
-        #region oldHSsystem
-        //XmlSerializer serializer = new XmlSerializer(typeof(int));
-        //FileStream stream = new FileStream(Path.Combine(path, "saveData.xml"), FileMode.Open);
-        //highScore = (int)serializer.Deserialize(stream);
-        //stream.Close();
-        //UpdateHighScoreText();
-        #endregion
         XmlSerializer scoreSerializer = new XmlSerializer(typeof(int[]));
         XmlSerializer namesSerializer = new XmlSerializer(typeof(string[]));
         FileStream scoreStream = new FileStream(Path.Combine(path, "topScores.xml"), FileMode.Open);
@@ -116,47 +100,6 @@ public class HighScoreManager : MonoBehaviour
 
     private void CheckForNewHighScore()
     {
-        #region oldHSsystem
-        //if (sessionScore > highScore)
-        //{
-        //    highScore = sessionScore;
-        //    HighScoreNotificationAnimator.SetBool("newhighscore", true);
-        //    Debug.Log("New high score!!!");
-        //    SetNewHighScore();
-
-        //    UpdateHighScoreText();
-        //}
-        #endregion
-
-        #region???
-        //int[] newHighScoreArray = new int[5];
-        //int newHighScoreLocation = 0;
-        //bool newHighScoreFound = false;
-
-
-        //for (int i = 0; i < highScoreContainer.Top5ScoresInt.Length; i++)
-        //{
-        //    //checks if the session score is viable for a new highscore and the new highscore hasn't been found yet
-        //    if (sessionScore >= highScoreContainer.Top5ScoresInt[i] && newHighScoreFound == false)
-        //    {
-        //        //new high score has been found! place it in the proper location
-        //        newHighScoreArray[i] = sessionScore;
-        //        newHighScoreFound = true;
-        //        newHighScoreLocation = i;
-        //    }
-
-        //    //checks if the new position does not exceed the scorearray length
-        //    if (i + newHighScoreLocation <= highScoreContainer.Top5ScoresInt.Length)
-        //    {
-        //        newHighScoreArray[(i + newHighScoreLocation)] = highScoreContainer.Top5ScoresInt[i];
-        //    }
-        //}
-
-        //highScoreContainer.Top5ScoresInt = newHighScoreArray;
-        //HighScoreNotificationAnimator.SetBool("newhighscore", true);
-        //SetNewHighScore();
-        //UpdateHighScoreText();
-        #endregion
 
         int[] newHighScoreArray = new int[5];
         string[] newNamesArray = new string[5];
@@ -176,7 +119,6 @@ public class HighScoreManager : MonoBehaviour
                 inputField.gameObject.SetActive(true);
                 HighScoreNotificationAnimator.SetBool("newhighscore", true);
                 newHighScoreLocation = i;
-                //UpdateHighScoreText();
             }
 
             //checks if thew newHighScore has not been found and the session score is lower than the highScoreInts
@@ -240,12 +182,6 @@ public class HighScoreManager : MonoBehaviour
 
     private void SetNewHighScore()
     {
-        #region oldHSsystem
-        //XmlSerializer serializer = new XmlSerializer(typeof(int));
-        //FileStream stream = new FileStream(Path.Combine(path, "saveData.xml"), FileMode.Create);
-        //serializer.Serialize(stream, highScore);
-        //stream.Close();
-        #endregion
 
         //serializes the scores
         XmlSerializer scoreSerializer = new XmlSerializer(typeof(int[]));
@@ -283,8 +219,6 @@ public class HighScoreManager : MonoBehaviour
 
     public void UpdateHighScoreText()
     {
-        //old
-        //HighScoreText.text = "High Score: " + highScore.ToString();
 
         for (int i = 0; i < HighScoreTextArray.Length; i++)
         {

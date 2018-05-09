@@ -150,9 +150,10 @@ e6f640fa2a67691963209e34b17f8545 Assembly-CSharp.dll:.CameraFollowScript
 205965134a5874db410d674ebdf33ba7 Assembly-CSharp.dll:.ExampleWheelController
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
-dc8373ba6f45d722c6b40a01b2e83d89 Assembly-CSharp.dll:.HighScoreManager
+4f06f0ccf41414c6f3ddbd623538dad1 Assembly-CSharp.dll:.HighScoreManager
 56c24a6952aa732905927098e8518dc9 Assembly-CSharp.dll:.PlayerShoot
 a17430587b480dd6f7b58643947b32c2 Assembly-CSharp.dll:.BackgroundMoveScript
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ScoreRestarter
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.BigInstructionTimeText
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TransitionAnimator
 f8433cf3034c92a713c51dc5996147bf Assembly-CSharp.dll:.MetaGameManager
@@ -205,7 +206,7 @@ f671a42aea5f34fec6a4450a3668c615 Assembly-CSharp.dll:UnityEngine.PostProcessing.
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HeroFlyAnimator
 31316aadfb4312f2b971a095fdba8f82 Assembly-CSharp.dll:.GameOverManager
 f84cc418a0eb0a5948ed2446242f271c Assembly-CSharp.dll:.SidestepMovement
-51e6aaa2ac929b434e6ce72d7458f6ab Assembly-CSharp.dll:.MouseManager
+68c24f993f3dd856c237cf4de25aec63 Assembly-CSharp.dll:.MouseManager
 12a37f1c7c3d5e1c7037b7a1096c5ecb Assembly-CSharp.dll:.ObjectRandomMovement
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ApplicationQuiter
 05205f60d404bf1a54ab36b56969653e Assembly-CSharp.dll:.HeroFlyMovement

@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroGames", "MicroGames.csproj", "{81C920B3-6289-989A-CD2B-6F9B25F997AC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroGames.Editor", "MicroGames.Editor.csproj", "{E11E1344-CDAE-7A95-DB08-846DBFD951C2}"

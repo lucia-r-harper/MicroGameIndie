@@ -387,6 +387,7 @@
     <Compile Include="Assets\Scripts\PauseManager.cs" />
     <Compile Include="Assets\UI\UIScripts\AnimatedButton.cs" />
     <Compile Include="Assets\UI\UIScripts\MouseManager.cs" />
+    <Compile Include="Assets\UI\UIScripts\TouchController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />

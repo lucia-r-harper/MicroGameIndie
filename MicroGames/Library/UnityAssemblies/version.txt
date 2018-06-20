@@ -68,6 +68,7 @@ D:/Program_Files/Unity2017.3/Editor/Data/UnityExtensions/Unity/UnitySpatialTrack
 D:/Program_Files/Unity2017.3/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll
 D:/Program_Files/Unity2017.3/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll
 D:/Program_Files/Unity2017.3/Editor/Data/Managed/UnityEditor.Graphs.dll
+D:/Program_Files/Unity2017.3/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 D:/Program_Files/Unity2017.3/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll
 C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/2015/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll
 C:/Users/cshar/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll

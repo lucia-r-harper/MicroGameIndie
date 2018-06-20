@@ -1,4 +1,4 @@
-WindowsStandalone
+WebGL
 SceneListBegin?
 Assets/Scenes/TitleScene.unity
 Assets/Scenes/GameOverScene.unity

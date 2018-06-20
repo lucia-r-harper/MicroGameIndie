@@ -88,12 +88,19 @@ public class HighScoreManager : MonoBehaviour
     {
         XmlSerializer scoreSerializer = new XmlSerializer(typeof(int[]));
         XmlSerializer namesSerializer = new XmlSerializer(typeof(string[]));
-        FileStream scoreStream = new FileStream(Path.Combine(path, "topScores.xml"), FileMode.Open);
-        FileStream namesStream = new FileStream(Path.Combine(path, "topNames.xml"), FileMode.Open);
-        highScoreInts = (int[])scoreSerializer.Deserialize(scoreStream);
-        highScoreNames = (string[])namesSerializer.Deserialize(namesStream);
-        scoreStream.Close();
-        namesStream.Close();
+        //FileStream scoreStream = new FileStream(Path.Combine(path, "topScores.xml"), FileMode.Open);
+        //FileStream namesStream = new FileStream(Path.Combine(path, "topNames.xml"), FileMode.Open);
+        //highScoreInts = (int[])scoreSerializer.Deserialize(scoreStream);
+        //highScoreNames = (string[])namesSerializer.Deserialize(namesStream);
+        //scoreStream.Close();
+        //namesStream.Close();
+
+        WWW wwwNames = new WWW(Path.Combine(path, "topNames.xml"));
+        WWW wwwScores = new WWW(Path.Combine(path, "topScores.xml"));
+
+        highScoreNames = (string[])namesSerializer.Deserialize(new StringReader(wwwNames.text));
+        highScoreInts = (int[])scoreSerializer.Deserialize(new StringReader(wwwScores.text));
+
         UpdateHighScoreText();
     }
 
@@ -180,6 +187,7 @@ public class HighScoreManager : MonoBehaviour
         namesStream.Close();
     }
 
+    //Update Me webways
     private void SetNewHighScore()
     {
 
@@ -190,6 +198,7 @@ public class HighScoreManager : MonoBehaviour
         scoreStream.Close();
     }
 
+    //Update Me webways
     private void SetNewHighScoreName()
     {
         XmlSerializer namesSerializer = new XmlSerializer(typeof(string[]));
